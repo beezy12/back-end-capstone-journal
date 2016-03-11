@@ -1,0 +1,17 @@
+extends ./header.jade
+
+block content
+
+    //- where all angular html-partials will be loaded
+    <div ui-view></div>
+
+    //-Bootstrap js and required jquery
+    script(src="/lib/jquery/dist/jquery.min.js")
+    script(src="/lib/bootstrap/dist/js/bootstrap.min.js")
+    //- angular links
+    script(src="/lib/angular/angular.min.js")
+    script(src="/lib/angular-ui-router/release/angular-ui-router.min.js")
+    script(src="/javascripts/app.js")
+    //- controllers
+    //- script(src="/javascripts/controllers/welcomeCtrler.js")
+    //- script(src="/javascripts/controllers/managementCtrler.js")

@@ -1,4 +1,4 @@
-# back-end-capstone-journal
+# Scribe: back-end-capstone
 A nice journalling app I built as my back-end capstone using the MEAN stack.
 
 Technologies used:

@@ -2,9 +2,14 @@
 
 const express = require('express')
 const app = express()
+const path = require('path')
 
 const PORT = process.env.PORT || 3000
 
+
+app.set('view engine', 'jade')
+// use public directory for static files
+app.use(express.static(path.join(__dirname, 'public')))
 
 // this will be the log in page
 app.get('/', (req, res) => {
@@ -12,7 +17,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/loggedin', (req, res) => {
-    res.send('logged in heeeere')
+    res.render('loggedin')
 })
 
 

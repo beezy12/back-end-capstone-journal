@@ -1,0 +1,47 @@
+{
+  "name": "back-end-capstone-journal",
+  "version": "1.0.0",
+  "description": "A nice journalling app I built as my back-end capstone using the MEAN stack.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beezy12/back-end-capstone-journal.git"
+  },
+  "eslintConfig": {
+    "env": {
+      "mocha": true,
+      "node": true,
+      "es6": true,
+      "browser": true
+    },
+    "extends": "eslint:recommended",
+    "globals": {
+      "res": true,
+      "app": true
+    },
+    "rules": {
+      "no-console": 0,
+      "no-unused-vars": 0,
+      "no-undef": 0,
+      "no-extra-semi": 0
+    }
+  },
+  "keywords": [],
+  "author": "Brian Stumbaugh <brian.stumbaugh@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/beezy12/back-end-capstone-journal/issues"
+  },
+  "homepage": "https://github.com/beezy12/back-end-capstone-journal#readme",
+  "devDependencies": {
+    "nodemon": "^1.9.1"
+  },
+  "dependencies": {
+    "express": "^4.13.4",
+    "mongoose": "^4.4.6"
+  }
+}

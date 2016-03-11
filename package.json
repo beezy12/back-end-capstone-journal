@@ -2,10 +2,11 @@
   "name": "back-end-capstone-journal",
   "version": "1.0.0",
   "description": "A nice journalling app I built as my back-end capstone using the MEAN stack.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "bower": "bower"
   },
   "repository": {
     "type": "git",
@@ -41,7 +42,10 @@
     "nodemon": "^1.9.1"
   },
   "dependencies": {
+    "bower": "^1.7.7",
     "express": "^4.13.4",
-    "mongoose": "^4.4.6"
+    "jade": "^1.11.0",
+    "mongoose": "^4.4.6",
+    "path": "^0.12.7"
   }
 }

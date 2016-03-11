@@ -1,0 +1,24 @@
+{
+  "name": "back-end-capstone-journal",
+  "description": "A nice journalling app I built as my back-end capstone using the MEAN stack.",
+  "main": "server.js",
+  "authors": [
+    "Brian Stumbaugh <brian.stumbaugh@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/beezy12/back-end-capstone-journal",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "^0.2.18",
+    "angular": "^1.5.0",
+    "bootstrap": "^3.3.6"
+  }
+}

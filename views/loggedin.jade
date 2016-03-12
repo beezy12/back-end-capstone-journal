@@ -2,8 +2,12 @@ extends ./header.jade
 
 block content
 
-    //- where all angular html-partials will be loaded
-    <div ui-view></div>
+    .container-fluid
+        .col-sm-12.col-md-12
+
+            //- where all angular html-partials will be loaded
+            div(ui-view)
+
 
     //-Bootstrap js and required jquery
     script(src="/lib/jquery/dist/jquery.min.js")

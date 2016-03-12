@@ -13,7 +13,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 // this will be the log in page
 app.get('/', (req, res) => {
-    res.send('yo')
+    res.render('index')
 })
 
 app.get('/loggedin', (req, res) => {

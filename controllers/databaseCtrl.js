@@ -9,6 +9,6 @@ module.exports = {
 
     // loggedin is the loggedin.jade file
     loggedin (req, res) {
-        res.render('loggedin')
+        res.render('loggedin')  
     }
 }

@@ -11,7 +11,11 @@ app.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
             url: '/',
             templateUrl: 'html-partials/welcome.html'
         })
+        .state('writing', {
+            url: '/newEntry',
+            templateUrl: 'html-partials/send-entry.html'
+        })
 
     // if user navigates to route we havent specified, redirect to default state
-    $urlRouterProvider.otherwise("/");
+    $urlRouterProvider.otherwise("/")
 })

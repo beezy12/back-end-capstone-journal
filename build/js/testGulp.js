@@ -1,0 +1,1 @@
+var a;console.log(a),void 0===a?console.log("a is undefined!"):console.log("a is defined");

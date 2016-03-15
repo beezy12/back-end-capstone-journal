@@ -14,6 +14,7 @@ const PORT = process.env.PORT || 3000
 
 app.set('view engine', 'jade')
 // this one gives a path to anything in public that doesn't already have a path
+// happens when the app starts up. looks for an index file in public
 app.use(express.static(path.join(__dirname, 'public')))
 // this one gives a path to anything in views that doesn't already have a path
 app.set('views', path.join(__dirname, 'views'))

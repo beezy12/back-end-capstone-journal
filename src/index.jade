@@ -1,0 +1,42 @@
+doctype html
+html(lang="en")
+head
+    title scribe
+    link(href='stylesheets/styles.css' rel='stylesheet')
+    link(href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet")
+
+
+    body(ng-app="scribe")
+
+
+        nav.navbar.navbar-default
+            .container-fluid
+            .navbar-header
+                button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+                    span.sr-only Toggle navigation
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+
+                a.navbar-brand(ui-sref="default") Home
+                a.navbar-brand(ui-sref="writing") New Entry
+
+
+
+        .container-fluid
+            .col-sm-12.col-md-12
+
+                //- where all angular html-partials will be loaded
+                div(ui-view)
+
+
+//-Bootstrap js and required jquery
+script(src="/lib/jquery/dist/jquery.min.js")
+script(src="/lib/bootstrap/dist/js/bootstrap.min.js")
+//- angular links
+script(src="/lib/angular/angular.min.js")
+script(src="/lib/angular-ui-router/release/angular-ui-router.min.js")
+script(src="/javascripts/app.js")
+//- controllers
+script(src="/javascripts/controllers/welcomeCtrl.js")
+//- script(src="/javascripts/controllers/managementCtrler.js")

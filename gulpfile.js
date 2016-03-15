@@ -1,7 +1,6 @@
 const gulp = require('gulp')
 const uglify = require('gulp-uglify')
 const sass = require('gulp-sass')
-const browserSync = require('browser-sync').create()
 const gulpJade = require('gulp-jade')
 const jade = require('jade')
 
@@ -19,37 +18,28 @@ gulp.task('scripts', function() {
 // styles task
 // .pipe(sass can take some commands in an object format, or you can leave it empty
 gulp.task('sass', function() {
-    gulp.src('public/stylesheets/*.scss')
-    .pipe(sass())
-    .pipe(gulp.dest('public/stylesheets/'))
-    // .pipe(browserSync.reload({
-    //     stream: true
-    // }))
+    return gulp.src('public/stylesheets/*.scss')
+        .pipe(sass({
+            outputStyle: 'compressed'
+        }))
+        .on('error', sass.logError)
+        .pipe(gulp.dest('public/stylesheets/'))
 })
 
 // 'watch' task runs the scripts task anytime a js file has been changed and saved
-gulp.task('watch', ['browserSync', 'sass'], function() {
+gulp.task('watch', function() {
     gulp.watch('js/*.js', ['scripts'])
     gulp.watch('public/**/*.scss', ['sass'])
 })
 
-// // reloads browser when there's changes
-// gulp.task('browserSync', function() {
-//     browserSync.init({
-//         server: {
-//             baseDir: '/'
-//         },
-//     })
-// })
-
 gulp.task('jade', function () {
-    return gulp.src('views/*.jade')
+    return gulp.src('src/**/*.jade')
         .pipe(gulpJade({
             jade: jade,
             pretty: true
         }))
-    .pipe(gulp.dest('public/html-partials'))
+    .pipe(gulp.dest('public/'))
 });
 
 // made an array here of all the tasks I want to run when I just type 'gulp' at the CL.
-gulp.task('default', ['sass', 'watch', 'browserSync', 'jade'])
+gulp.task('default', ['sass', 'watch', 'jade'])

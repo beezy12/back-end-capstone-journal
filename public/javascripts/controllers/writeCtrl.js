@@ -2,4 +2,8 @@
 
 'use strict'
 
-// app.controller()
+app.controller('writeCtrl', [function() {
+    const self = this
+
+    self.test = 4
+}])

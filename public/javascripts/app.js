@@ -4,16 +4,24 @@
 const app = angular.module('scribe', ['ui.router'])
 
 // configure app with ui router
+// listing these twice is called annotating. this is done because when this code gets minified,
+// the second part of it (the function part), gets called just a and b when it's minified.
 app.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
     // the state here matches the ui-sref on the a links in header.jade and elsewhere
     $stateProvider
-        // .state('default', {
-        //     url: '/',
-        //     templateUrl: 'index.html'
-        // })
         .state('default', {
             url: '/',
             templateUrl: 'views/login.html'
+        })
+        .state('welcome', {
+            url: '/welcome',
+            templateUrl: 'views/welcome.html',
+            controller: 'welcomeCtrl as welcome'
+        })
+        .state('writing', {
+            url: '/write',
+            templateUrl: 'views/writing.html',
+            controller: 'writeCtrl as write'
         })
 
     // if user navigates to route we havent specified, redirect to default state
@@ -27,7 +35,7 @@ app.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
 // except login.
 
 
-// .state('newsily-main', {
+//          .state('newsily-main', {
 //           url: "/newsily-main",
 //           templateUrl: "app/partials/main-view.html",
 //           controller: "mainAppCtrl"

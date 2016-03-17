@@ -41,7 +41,9 @@
   "devDependencies": {
     "browser-sync": "^2.11.1",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
     "gulp-jade": "^1.1.0",
+    "gulp-plumber": "^1.1.0",
     "gulp-ruby-sass": "^2.0.6",
     "gulp-sass": "^2.2.0",
     "gulp-uglify": "^1.5.3",
@@ -52,6 +54,7 @@
     "express": "^4.13.4",
     "jade": "^1.11.0",
     "mongoose": "^4.4.6",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "webpack": "^1.12.14"
   }
 }

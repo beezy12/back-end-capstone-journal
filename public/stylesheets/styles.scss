@@ -1,7 +1,12 @@
 body {
-    background-color: #00FF7F;
+    background-color: blue;
     font-family: "Playfair Display", Times New Roman;
     font-size: 5rem;
-    border-top: 25px solid black;
-    color: green;
+    border-top: 25px solid green;
+    color: red;
+}
+
+
+ul {
+    transition: all 0.2s ease
 }

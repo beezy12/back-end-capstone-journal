@@ -1,1 +1,12 @@
-body{background-color:#00FF7F;font-family:"Playfair Display", Times New Roman;font-size:5rem;border-top:25px solid black;color:green}
+body {
+  background-color: blue;
+  font-family: "Playfair Display", Times New Roman;
+  font-size: 5rem;
+  border-top: 25px solid green;
+  color: red;
+}
+
+ul {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}

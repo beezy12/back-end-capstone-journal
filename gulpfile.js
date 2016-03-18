@@ -16,7 +16,7 @@ function errorLog(error) {
 }
 
 
-// scripts task
+// scripts task   (this doesn't work because Im using Angular and it needs pure javascript)
 // uglifies
 gulp.task('scripts', function() {
     // load the files
@@ -33,7 +33,7 @@ gulp.task('scripts', function() {
 gulp.task('image', function() {
     gulp.src('public/images/*')
         .pipe(imagemin())
-        .pipe(gulp.dest('public/images  '))
+        .pipe(gulp.dest('public/images'))
 })
 
 
@@ -41,9 +41,9 @@ gulp.task('image', function() {
 // specify what version you want to use in the prefix() function.
 // .pipe(sass can take some commands in an object format, or you can leave it empty
 gulp.task('sass', function() {
-    return gulp.src('public/stylesheets/*.scss')
+    return gulp.src('src/stylesSass/*.scss')
                .pipe(sass({
-                    outputStyle: 'expanded'
+                    outputStyle: 'compressed'
                 }))
                // .on('error', sass.logError)
                // or this for errors. this fires the function above if there's an error.
@@ -73,7 +73,7 @@ gulp.task('watch', function() {
     gulp.watch('src/**/*', ['jade'])
     gulp.watch('public/images/*', ['image'])
     gulp.watch('js/*.js', ['scripts'])
-    gulp.watch('public/**/*.scss', ['sass'])
+    gulp.watch('src/stylesSass/*.scss', ['sass'])
 })
 
 

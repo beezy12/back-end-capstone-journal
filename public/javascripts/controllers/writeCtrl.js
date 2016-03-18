@@ -6,4 +6,10 @@ app.controller('writeCtrl', [function() {
     const self = this
 
     self.test = 4
+
+
+    self.save = function() {
+        $http.post('models/databaseUser', dataToPass)
+    }
+
 }])

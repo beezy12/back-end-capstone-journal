@@ -32,7 +32,8 @@ app.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
 //    ******
 // remember to also include a ui-view in /newsily-main. this is where emma's navbar lived and the
 // ui-view in there was where all other partials lived. so the navbar was present on every page
-// except login.
+// except login.   *** ALSO: when using nested views....you must include dot notation when stringing
+// them together.
 
 
 //          .state('newsily-main', {

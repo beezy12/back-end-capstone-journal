@@ -3,9 +3,11 @@ const gulp = require('gulp'),
       sass = require('gulp-sass'),
       gulpJade = require('gulp-jade'),
       jade = require('jade'),
-      livereload = require('gulp-livereload')
       imagemin = require('gulp-imagemin'),
-      prefix = require('gulp-autoprefixer')
+      prefix = require('gulp-autoprefixer'),
+      browserSync = require('browser-sync')
+      reload  = browserSync.reload;
+      babel = require('gulp-babel')
 
 // this function runs when there's an error, and gives a descriptive message.
 // (the error messages are commented out below, in case I want to use them later
@@ -18,15 +20,15 @@ function errorLog(error) {
 
 // scripts task   (this doesn't work because Im using Angular and it needs pure javascript)
 // uglifies
-gulp.task('scripts', function() {
-    // load the files
-    gulp.src('public/javascripts/*.js')
-        // uglify them
-        .pipe(uglify())
-        .on('error', errorLog)
-        // and save them in minjs
-        .pipe(gulp.dest('build/js'))
-})
+// gulp.task('scripts', function() {
+//     // load the files
+//     gulp.src('public/javascripts/*.js')
+//         // uglify them
+//         .pipe(uglify())
+//         .on('error', errorLog)
+//         // and save them in minjs
+//         .pipe(gulp.dest('build/js'))
+// })
 
 // image task compresses images. have it overwriting the image with the compressed one, but
 // you could have it saving to another folder to save both copies.
@@ -51,8 +53,9 @@ gulp.task('sass', function() {
                .on('error', errorLog)
                .pipe(prefix())
                .pipe(gulp.dest('public/stylesheets/'))
-               .pipe(livereload())
+               .pipe(reload({stream: true}))
 })
+
 
 // converts jade into html
 gulp.task('jade', function () {
@@ -61,15 +64,32 @@ gulp.task('jade', function () {
                     jade: jade,
                     pretty: true
                 }))
-            .pipe(gulp.dest('public/'))
-            .pipe(livereload())
+                .pipe(gulp.dest('public/'))
+                .pipe(reload({stream: true}))
+})
+
+
+// server here needs to be pointed at index.html
+gulp.task('serve', ['sass'], function() {
+    browserSync.init({
+        server: './public'
+    });
+
+    gulp.watch("src/stylesSass/*.scss", ['sass']);
+
+})
+
+// using babel to write ES6
+gulp.task('babelify', function(){
+    return gulp.src('build/javascripts/main.js')
+    .pipe(babel({
+        presets : ['es2015']
+    }))
+    .pipe(gulp.dest('app/assets/javascripts/'));
 })
 
 // 'watch' task runs the task in brackets anytime a file has been changed and saved
 gulp.task('watch', function() {
-
-    livereload.listen()
-
     gulp.watch('src/**/*', ['jade'])
     gulp.watch('public/images/*', ['image'])
     gulp.watch('js/*.js', ['scripts'])
@@ -78,4 +98,7 @@ gulp.task('watch', function() {
 
 
 // made an array here of all the tasks I want to run when I just type 'gulp' at the CL.
-gulp.task('default', ['image', 'sass', 'jade', 'watch'])
+gulp.task('default', ['babelify', 'image', 'sass', 'jade', 'serve', 'watch'])
+
+
+

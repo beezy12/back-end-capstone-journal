@@ -4,6 +4,7 @@
 
 app.controller('writeCtrl', [function() {
     const self = this
+    console.log('inside of writeCtrl')
 
     self.test = 4
 

@@ -61,8 +61,9 @@ gulp.task('sass', function() {
 gulp.task('jade', function () {
     return gulp.src('src/**/*.jade')
                 .pipe(gulpJade({
-                    jade: jade,
-                    pretty: true
+                    // jade: jade,
+                    pretty: true,
+                    doctype: 'html'
                 }))
                 .pipe(gulp.dest('public/'))
                 .pipe(reload({stream: true}))

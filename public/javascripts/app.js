@@ -15,14 +15,14 @@ app.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
         })
         .state('welcome', {
             url: '/welcome',
-            templateUrl: 'views/welcome.html',
-            controller: 'welcomeCtrl as welcome'
+            templateUrl: 'views/welcome.html'
+            // controller: 'welcomeCtrl'
         })
-        .state('writing', {
+        .state('welcome.write', {
             url: '/write',
             templateUrl: 'views/welcome.writing.html',
-            controller: 'writeCtrl as write',
-            parent: 'welcome'
+            controller: 'writeCtrl'
+            // parent: 'welcome'
         })
 
         // this ^^^^ is really going to be welcome/write. you just add the new piece on.

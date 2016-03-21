@@ -2,22 +2,36 @@ body {
   background-image: url("../images/grungy.jpg");
   background-size: cover;
   background-position: center;
-  font-family: "Playfair Display", Times New Roman;
-  font-size: 5rem;
   border-top: 25px solid black;
-  color: red;
+  color: black;
   margin: 0;
   padding: 0;
 }
 
-@font-face {}#journalTitle {
-  margin-left: 30px;
+@font-face {
+  font-family: 'meddon';
+  src: url("../fonts/Meddon.ttf");
+}
+
+#journalTitle {
+  font-family: "meddon", Times New Roman;
+  font-size: 5rem;
+  outline: none;
+  text-align: center;
+  height: 110px;
+  width: 90%;
+  line-height: 1;
+  vertical-align: middle;
 }
 
 #journalBox {
-  width: 1020px;
+  font-family: "meddon", Times New Roman;
+  font-size: 4rem;
+  width: 90%;
   height: 800px;
-  border: none;
   outline: none;
   resize: none;
+  margin-top: 20px;
+  margin-left: 60px;
+  padding: 15px;
 }

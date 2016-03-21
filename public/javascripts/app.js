@@ -49,7 +49,7 @@ app.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
         // it's still nested and really just connected to welcome. it can get messy.
 
     // if user navigates to route we havent specified, redirect to default state
-    $urlRouterProvider.otherwise("/welcome")
+    $urlRouterProvider.otherwise("/")
 })
 
 

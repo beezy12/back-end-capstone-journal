@@ -4,8 +4,7 @@
 const app = angular.module('scribe', ['ui.router'])
 
 // configure app with ui router
-// listing these twice is called annotating. this is done because when this code gets minified,
-// the second part of it (the function part), gets called just a and b when it's minified.
+
 app.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
     // the state here matches the ui-sref on the a links in header.jade and elsewhere
     $stateProvider
@@ -15,22 +14,42 @@ app.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
         })
         .state('welcome', {
             url: '/welcome',
-            templateUrl: 'views/welcome.html'
-            // controller: 'welcomeCtrl'
+            views: {
+                '': {
+                    templateUrl: 'views/welcome.html',
+                    controller: 'welcomeCtrl'
+                },
+                'catcher@welcome': {
+                    templateUrl: 'views/noteList.html',
+                    controller: 'noteListCtrl'
+                }
+            }
         })
         .state('welcome.write', {
-            url: '/write',
-            templateUrl: 'views/welcome.writing.html',
-            controller: 'writeCtrl'
-            // parent: 'welcome'
+            views: {
+                'catcher@welcome': {
+                    templateUrl: 'views/writing.html',
+                    controller: 'writeCtrl'
+                }
+            }
         })
+
+        // ^^^^ add a url if wanting to use route params
+
+
+        // .state('welcome.write', {
+        //     url: '/write',
+        //     templateUrl: 'views/welcome.writing.html',
+        //     // controller: 'writeCtrl'
+        //     // parent: 'welcome'
+        // })
 
         // this ^^^^ is really going to be welcome/write. you just add the new piece on.
         // BUT if you did '^/write' then this path would be like a root path. even tho
         // it's still nested and really just connected to welcome. it can get messy.
 
     // if user navigates to route we havent specified, redirect to default state
-    $urlRouterProvider.otherwise("/")
+    $urlRouterProvider.otherwise("/welcome")
 })
 
 
@@ -58,4 +77,6 @@ app.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
 //           url: "/newsily-main-posts",
 //           templateUrl: "app/partials/main-view.posts.html"
 // });
+
+
 

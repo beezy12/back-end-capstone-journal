@@ -8,6 +8,7 @@ app.controller('writeCtrl', [function() {
 
     self.test = 4
 
+    self.username = userData.data[0].username
 
     self.saveEntry = function() {
         $http.post('models/databaseUser', dataToPass)

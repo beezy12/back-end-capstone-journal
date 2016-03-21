@@ -6,12 +6,12 @@ const userModel = require('../models/databaseUser')
 module.exports = {
 
     index (req, res) {
-        res.render('index')
+        // res.render('index')
     },
 
-    // loggedin is the loggedin.jade file
+    //loggedin is the loggedin.jade file
     loggedin (req, res) {
-        res.render('loggedin')
+        // res.render('loggedin')
     },
 
     getUserInfo (req, res) {

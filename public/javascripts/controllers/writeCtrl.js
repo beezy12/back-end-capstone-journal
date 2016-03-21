@@ -8,7 +8,7 @@ app.controller('writeCtrl', [function() {
     self.test = 4
 
 
-    self.save = function() {
+    self.saveEntry = function() {
         $http.post('models/databaseUser', dataToPass)
     }
 

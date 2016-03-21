@@ -45,7 +45,7 @@ gulp.task('image', function() {
 gulp.task('sass', function() {
     return gulp.src('src/stylesSass/*.scss')
                .pipe(sass({
-                    outputStyle: 'compressed'
+                    outputStyle: 'expanded'
                 }))
                // .on('error', sass.logError)
                // or this for errors. this fires the function above if there's an error.
@@ -76,8 +76,8 @@ gulp.task('serve', ['sass'], function() {
     });
 
     gulp.watch("src/stylesSass/*.scss", ['sass']);
-
 })
+
 
 // using babel to write ES6
 gulp.task('babelify', function(){

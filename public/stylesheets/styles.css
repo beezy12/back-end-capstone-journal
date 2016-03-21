@@ -1,1 +1,23 @@
-body{background-color:blue;font-family:"Playfair Display", Times New Roman;font-size:5rem;border-top:25px solid blue;color:red}ul{-webkit-transition:all 0.2s ease;transition:all 0.2s ease}p{color:red}
+body {
+  background-image: url("../images/grungy.jpg");
+  background-size: cover;
+  background-position: center;
+  font-family: "Playfair Display", Times New Roman;
+  font-size: 5rem;
+  border-top: 25px solid black;
+  color: red;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {}#journalTitle {
+  margin-left: 30px;
+}
+
+#journalBox {
+  width: 1020px;
+  height: 800px;
+  border: none;
+  outline: none;
+  resize: none;
+}

@@ -7,28 +7,11 @@ head
 
 
     body(ng-app="scribe")
-        //- img(src='../images/grungy.jpg')
-
-
-        nav.navbar.navbar-default
-            .container-fluid
-            .navbar-header
-                button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
-                    span.sr-only Toggle navigation
-                    span.icon-bar
-                    span.icon-bar
-                    span.icon-bar
-
-                a.navbar-brand(ui-sref="welcome") Home
-                a.navbar-brand(ui-sref="writing") New Entry
 
 
 
-        .container-fluid
-            .col-sm-12.col-md-12
-
-                //- where all angular html-partials will be loaded
-                div(ui-view)
+        //- where all angular html-partials will be loaded
+        div(ui-view)
 
 
 //-Bootstrap js and required jquery

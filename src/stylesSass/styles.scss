@@ -2,8 +2,6 @@ body {
     background-image: url("../images/grungy.jpg");
     background-size: cover;
     background-position: center;
-    // font-family: "berty", Times New Roman;
-    // font-size: 4rem;
     border-top: 25px solid black;
     color: black;
     margin: 0;
@@ -31,7 +29,6 @@ body {
 #journalTitle {
     font-family: "meddon", Times New Roman;
     font-size: 5rem;
-    // margin-left: 60px;
     outline: none;
     text-align: center;
     height: 110px;
@@ -49,7 +46,6 @@ body {
     outline: none;
     resize: none;
     margin-top: 20px;
-    // margin-left: 60px;
     padding: 15px;
 }
 

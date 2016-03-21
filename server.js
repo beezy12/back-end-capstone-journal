@@ -6,6 +6,7 @@ const path = require('path')
 const mongoose = require('mongoose')
 const MONGODB_URL = 'mongodb://localhost:27017/scribe'
 const bodyParser = require('body-parser')
+const methodOverride = require('method-override')
 
 // const routes = require('./routes/')
 const welcomeRtr = require('./routes/welcomeRtr')

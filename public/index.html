@@ -5,18 +5,7 @@
   <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="stylesheets/styles.css" rel="stylesheet">
   <body ng-app="scribe">
-    
-    <nav class="navbar navbar-default">
-      <div class="container-fluid"></div>
-      <div class="navbar-header">
-        <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a ui-sref="welcome" class="navbar-brand">Home</a><a ui-sref="writing" class="navbar-brand">New Entry</a>
-      </div>
-    </nav>
-    <div class="container-fluid">
-      <div class="col-sm-12 col-md-12">
-        <div ui-view></div>
-      </div>
-    </div>
+    <div ui-view></div>
   </body>
 </head>
 <script src="/lib/jquery/dist/jquery.min.js"></script>

@@ -20,13 +20,26 @@ app.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
         })
         .state('writing', {
             url: '/write',
-            templateUrl: 'views/writing.html',
-            controller: 'writeCtrl as write'
+            templateUrl: 'views/welcome.writing.html',
+            controller: 'writeCtrl as write',
+            parent: 'welcome'
         })
+
+        // this ^^^^ is really going to be welcome/write. you just add the new piece on.
+        // BUT if you did '^/write' then this path would be like a root path. even tho
+        // it's still nested and really just connected to welcome. it can get messy.
 
     // if user navigates to route we havent specified, redirect to default state
     $urlRouterProvider.otherwise("/")
 })
+
+
+
+
+
+
+
+
 
 
 //    ******

@@ -14,6 +14,10 @@ body {
   src: url("../fonts/Meddon.ttf");
 }
 
+.mainNav {
+  background-color: transparent;
+}
+
 #journalTitle {
   font-family: "meddon", Times New Roman;
   font-size: 5rem;

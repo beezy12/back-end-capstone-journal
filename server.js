@@ -4,33 +4,36 @@ const express = require('express')
 const app = express()
 const path = require('path')
 const mongoose = require('mongoose')
-const MONGODB_URL = 'mongodb://localhost:27017/scribe'
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
+const session = require('express-session')
+const RedisStore = require('connect-redis')(session)
+const flash = require('connect-flash')
+const passport = require('passport')
 
-// const routes = require('./routes/')
 const noteListRtr = require('./routes/noteListRtr')
 
 const PORT = process.env.PORT || 3000
+const MONGODB_URL = 'mongodb://localhost:27017/scribe'
 
 
 app.set('view engine', 'jade')
-// app.use(bodyParser.urlencoded({extended:false}));
 
-// set this up to get delete method working for logout
-// app.use(methodOverride('_method'))
+app.use(bodyParser.urlencoded({extended:false}));
 
-// this one gives a path to anything in public that doesn't already have a path
-// happens when the app starts up. looks for an index file in public
+app.use(methodOverride('_method'))
+
 app.use(express.static(path.join(__dirname, 'public')))
-// this one gives a path to anything in views that doesn't already have a path
+
 app.set('views', path.join(__dirname, 'views'))
 
 
 
 
-
 app.use(noteListRtr)
+
+
+
 
 
 mongoose.connect(MONGODB_URL, (err) => {

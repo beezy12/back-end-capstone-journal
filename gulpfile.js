@@ -81,13 +81,13 @@ gulp.task('jade', function () {
 
 
 // using babel to write ES6
-gulp.task('babelify', function(){
-    return gulp.src('build/javascripts/main.js')
-    .pipe(babel({
-        presets : ['es2015']
-    }))
-    .pipe(gulp.dest('app/assets/javascripts/'));
-})
+// gulp.task('babelify', function(){
+//     return gulp.src('build/javascripts/main.js')
+//     .pipe(babel({
+//         presets : ['es2015']
+//     }))
+//     .pipe(gulp.dest('app/assets/javascripts/'));
+// })
 
 // 'watch' task runs the task in brackets anytime a file has been changed and saved
 gulp.task('watch', function() {

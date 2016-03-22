@@ -11,13 +11,13 @@ app.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
         .state('default', {
             url: '/',
             templateUrl: 'views/login.html'
+            // when logged in, use state.go to route to the main state below
         })
         .state('main', {
             url: '/main',
             views: {
                 '': {      // the empty string here is the nameless ui-view in index.html
                     templateUrl: 'views/main.html'
-                    // controller: 'welcomeCtrl'
                 },
                 'catcher@main': {
                     templateUrl: 'views/noteList.html'

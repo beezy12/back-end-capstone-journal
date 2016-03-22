@@ -5,8 +5,8 @@ const gulp = require('gulp'),
       jade = require('jade'),
       imagemin = require('gulp-imagemin'),
       prefix = require('gulp-autoprefixer'),
-      browserSync = require('browser-sync')
-      reload  = browserSync.reload;
+      // browserSync = require('browser-sync')
+      // reload  = browserSync.reload;
       babel = require('gulp-babel')
 
 // this function runs when there's an error, and gives a descriptive message.
@@ -53,7 +53,7 @@ gulp.task('sass', function() {
                .on('error', errorLog)
                .pipe(prefix())
                .pipe(gulp.dest('public/stylesheets/'))
-               .pipe(reload({stream: true}))
+               // .pipe(reload({stream: true}))
 })
 
 
@@ -66,18 +66,18 @@ gulp.task('jade', function () {
                     doctype: 'html'
                 }))
                 .pipe(gulp.dest('public/'))
-                .pipe(reload({stream: true}))
+                // .pipe(reload({stream: true}))
 })
 
 
 // server here needs to be pointed at index.html
-gulp.task('serve', ['sass'], function() {
-    browserSync.init({
-        server: './public'
-    });
+// gulp.task('serve', ['sass'], function() {
+//     browserSync.init({
+//         server: './public'
+//     });
 
-    gulp.watch("src/stylesSass/*.scss", ['sass']);
-})
+//     gulp.watch("src/stylesSass/*.scss", ['sass']);
+// })
 
 
 // using babel to write ES6
@@ -99,7 +99,7 @@ gulp.task('watch', function() {
 
 
 // made an array here of all the tasks I want to run when I just type 'gulp' at the CL.
-gulp.task('default', ['babelify', 'image', 'sass', 'jade', 'serve', 'watch'])
+gulp.task('default', ['babelify', 'image', 'sass', 'jade', 'watch'])
 
 
 

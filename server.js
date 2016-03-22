@@ -9,16 +9,16 @@ const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
 
 // const routes = require('./routes/')
-const welcomeRtr = require('./routes/welcomeRtr')
+const noteListRtr = require('./routes/noteListRtr')
 
 const PORT = process.env.PORT || 3000
 
 
 app.set('view engine', 'jade')
-app.use(bodyParser.urlencoded({extended:false}));
+// app.use(bodyParser.urlencoded({extended:false}));
 
 // set this up to get delete method working for logout
-app.use(methodOverride('_method'))
+// app.use(methodOverride('_method'))
 
 // this one gives a path to anything in public that doesn't already have a path
 // happens when the app starts up. looks for an index file in public
@@ -30,7 +30,7 @@ app.set('views', path.join(__dirname, 'views'))
 
 
 
-app.use(welcomeRtr)
+app.use(noteListRtr)
 
 
 mongoose.connect(MONGODB_URL, (err) => {

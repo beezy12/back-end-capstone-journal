@@ -3,14 +3,14 @@
 // app creation
 const app = angular.module('scribe', ['ui.router'])
 
-// configure app with ui router
-
 app.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
     // the state here matches the ui-sref on the a links in header.jade and elsewhere
     $stateProvider
         .state('default', {
             url: '/',
-            templateUrl: 'views/login.html'
+            templateUrl: 'views/login.html',
+            controller: 'authCtrl',
+            controllerAs: 'auth'
             // when logged in, use state.go to route to the main state below
         })
         .state('main', {
@@ -21,7 +21,8 @@ app.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
                 },
                 'catcher@main': {
                     templateUrl: 'views/noteList.html'
-                    // controller: 'noteListCtrl'
+                    // controller: 'noteListCtrl',
+                    // controllerAs: 'noteList'
                 }
             }
         })

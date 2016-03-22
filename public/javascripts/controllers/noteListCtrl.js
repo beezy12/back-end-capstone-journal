@@ -14,6 +14,6 @@ app.controller('noteListCtrl', ['$http', function($http) {
 
         self.username = userData.data[0].username
     })
-
-
 }])
+
+

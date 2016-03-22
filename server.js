@@ -19,7 +19,7 @@ const MONGODB_URL = 'mongodb://localhost:27017/scribe'
 
 app.set('view engine', 'jade')
 
-app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.urlencoded({extended:false}))
 
 app.use(methodOverride('_method'))
 

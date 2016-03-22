@@ -1,5 +1,11 @@
+@font-face {
+    font-family: 'meddon';
+    src: url('../fonts/Meddon.ttf')
+}
+
+
+
 body {
-    background-image: url("../images/border.jpg");
     background-size: cover;
     background-position: center;
     border-top: 12px solid #4C0405;
@@ -7,6 +13,8 @@ body {
     margin: 0;
     padding: 0;
     font-size: 3rem;
+    font-family: "meddon", Times New Roman;
+    background-image: url("../images/border.jpg");
 }
 
 // @font-face {
@@ -14,16 +22,22 @@ body {
 //     src: url('../fonts/Bertholdr Mainzer Fraktur.ttf')
 // }
 
-@font-face {
-    font-family: 'meddon';
-    src: url('../fonts/Meddon.ttf')
-}
 
 // @font-face {
 //     font-family: 'chopin':
 //     src: url('../fonts/ChopinScript.ttf')
 // }
 
+// .loginDiv{
+//     background-image: url("../images/cover.jpg");
+// }
+
+// .bookDiv {
+//     background-image: url("../images/border.jpg");
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     min-height: 100%;
+// }
 
 .mainNav {
     background-color: rgba(0,0,0,0);
@@ -56,10 +70,6 @@ body {
     padding: 15px;
     background-color: rgba(0,0,0,0);
 }
-
-
-
-
 
 
 

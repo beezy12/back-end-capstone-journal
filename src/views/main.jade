@@ -1,25 +1,25 @@
+.bookDiv
+    nav.navbar.navbar-default.mainNav
+                .container-fluid
+                .navbar-header
+                    button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+                        span.sr-only Toggle navigation
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
 
-nav.navbar.navbar-default.mainNav
-            .container-fluid
-            .navbar-header
-                button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
-                    span.sr-only Toggle navigation
-                    span.icon-bar
-                    span.icon-bar
-                    span.icon-bar
+                    a.navbar-brand(ui-sref="main") Home
+                    a.navbar-brand(ui-sref="main.write") New Entry
 
-                a.navbar-brand(ui-sref="main") Home
-                a.navbar-brand(ui-sref="main.write") New Entry
-
-div(ui-view='catcher')
-
-
+    div(ui-view='catcher')
 
 
 
 
-//- h1 Notes index
 
-//- ul
-//-     each note in notes
-//-         li: a(href='/notes/#{note._id}')=note.title
+
+    //- h1 Notes index
+
+    //- ul
+    //-     each note in notes
+    //-         li: a(href='/notes/#{note._id}')=note.title

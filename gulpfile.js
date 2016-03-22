@@ -99,7 +99,7 @@ gulp.task('watch', function() {
 
 
 // made an array here of all the tasks I want to run when I just type 'gulp' at the CL.
-gulp.task('default', ['babelify', 'image', 'sass', 'jade', 'watch'])
+gulp.task('default', ['image', 'sass', 'jade', 'watch'])
 
 
 

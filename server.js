@@ -19,13 +19,14 @@ const MONGODB_URL = 'mongodb://localhost:27017/scribe'
 
 app.set('view engine', 'jade')
 
+app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:false}))
 
 app.use(methodOverride('_method'))
 
 app.use(express.static(path.join(__dirname, 'public')))
-
 app.set('views', path.join(__dirname, 'views'))
+
 
 
 

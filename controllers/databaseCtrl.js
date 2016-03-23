@@ -14,6 +14,7 @@ module.exports = {
     }
 
 
+
     // register method
     // also console.log(req.body) inside of method on back end to see what you're getting back
 

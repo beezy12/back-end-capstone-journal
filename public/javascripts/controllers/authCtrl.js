@@ -11,7 +11,7 @@ app.controller('authCtrl', ['$http', '$state', '$location', function($http, $sta
     self.verify = ''
 
 
-
+    // this function fires on the ng-submit='auth.register' in the form
     self.register = function() {
         let obj = {email: self.email, password: self.pass, verify: self.verify}
 
@@ -32,7 +32,7 @@ app.controller('authCtrl', ['$http', '$state', '$location', function($http, $sta
 
 
     self.login = function() {
-
+        let loginObj = {email: self.email, password: self.pass}
     }
 
 

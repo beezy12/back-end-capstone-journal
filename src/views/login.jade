@@ -1,10 +1,11 @@
 .loginDiv
 
-    h1 welcome to Scribe. Now log in.
+    h1 Now log in.
 
 
 
-    form(action='/login' method='POST')
+    //- form(action='/login' method='POST')
+    form(ng-submit="auth.login")
         .input-group
             label(for='email') Email
             input#email(type='email', name='email')

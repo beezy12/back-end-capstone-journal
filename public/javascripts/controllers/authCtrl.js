@@ -31,22 +31,22 @@ app.controller('authCtrl', ['$http', '$state', '$location', function($http, $sta
 
 
 
-    self.login = function() {
-        console.log('login button clicked')
+    // self.login = function() {
+    //     console.log('login button clicked')
 
-        let loginObj = {email: self.email, password: self.pass}
+    //     let loginObj = {email: self.email, password: self.pass}
 
-        $http.post('/api/login', loginObj)
-        .then((data) => {
-            console.log('this ---->>', data)
-        })
+    //     $http.post('/api/login', loginObj)
+    //     .then((data) => {
+    //         console.log('this ---->>', data)
+    //     })
 
-    }
-
-
-
+    // }
 
 }])
+
+
+
 
 
 

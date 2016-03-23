@@ -1,0 +1,18 @@
+
+<form ng-submit="auth.register()">
+  <div class="input-group">
+    <label for="email">Email</label>
+    <input id="email" ng-model="auth.email" type="email" name="email" autofocus required>
+  </div>
+  <div class="input-group">
+    <label for="pass">Password</label>
+    <input id="pass" ng-model="auth.pass" type="password" name="password">
+  </div>
+  <div class="input-group">
+    <label for="pass-verify">Password Verify</label>
+    <input id="pass-verify" ng-model="auth.verify" type="password" name="verify">
+  </div>
+  <div class="input-group">
+    <input type="submit" value="register">
+  </div>
+</form>

@@ -1,6 +1,6 @@
 'use strict'
 
-app.controller('authCtrl', ['$http', '$state', function($http, $state) {
+app.controller('authCtrl', ['$http', '$state', '$location', function($http, $state, $location) {
 
     // use vm instead of self.
     const self = this
@@ -13,17 +13,14 @@ app.controller('authCtrl', ['$http', '$state', function($http, $state) {
 
 
     self.register = function() {
-
         let obj = {email: self.email, password: self.pass, verify: self.verify}
-        console.log('clicky')
-
 
         $http.post('/api/register', obj)
         .then((data) => {
-            console.log(data)
+            // console.log(data)
             if(data.status === 200) {
                 console.log('this is the status code Ive been waiting for')
-                $state.go('main')
+                $location.path('/login')
             } else {
                 console.log('you did something very wrong')
             }
@@ -33,6 +30,16 @@ app.controller('authCtrl', ['$http', '$state', function($http, $state) {
     }
 
 
+
+    self.login = function() {
+
+    }
+
+
+
+
 }])
+
+
 
 

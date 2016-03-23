@@ -17,15 +17,4 @@
 
 
 
-    form(ng-submit="auth.register()")
-        .input-group
-            label(for='email') Email
-            input#email(ng-model='auth.email' type='email', name='email', autofocus, required, value=email)
-        .input-group
-            label(for='pass') Password
-            input#pass(ng-model='auth.pass' type='password', name='password')
-        .input-group
-            label(for='pass-verify') Password Verify
-            input#pass-verify(ng-model='auth.verify' type='password', name='verify')
-        .input-group
-            input(type='submit', value='register')
+

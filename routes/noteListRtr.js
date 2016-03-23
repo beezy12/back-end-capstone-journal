@@ -13,7 +13,7 @@ router.get('/api/userdata', databaseCtrl.getUserInfo)
 
 router.post('/api/register', (req, res) => {
     // see what you get back in terminal for req.body and do comparisons
-    console.log('req.body', req.body)
+    // console.log('req.body', req.body)
     if(req.body.password === req.body.verify) {
 
         User.findOne({email: req.body.email}, (err,user) => {
@@ -23,7 +23,7 @@ router.post('/api/register', (req, res) => {
                 res.sendStatus(403).send('there was already an email in there')
             } else {
                 User.create(req.body, (err, user) => {
-                    console.log(user)
+                    console.log('req.body in the back end', user)
                     if(err) throw err
 
                     res.status(200).send('created a new profile')

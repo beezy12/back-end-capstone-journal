@@ -47,4 +47,4 @@ app.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
     $urlRouterProvider.otherwise("/")
 })
 
-//
+

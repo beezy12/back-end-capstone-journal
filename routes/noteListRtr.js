@@ -2,11 +2,14 @@
 
 const express = require('express')
 const router = express.Router()
+const passport = require('passport')
+
 const databaseCtrl = require('../controllers/databaseCtrl')
 const User = require('../models/databaseUser')
+require('../lib/local')
 
 
-// router.get('/api/login', databaseCtrl.loginUser)
+
 router.get('/api/userdata', databaseCtrl.getUserInfo)
 
 
@@ -38,14 +41,31 @@ router.post('/api/register', (req, res) => {
 
 
 
+// router.post('/api/login',
+//     passport.authenticate('local', {
+//         successRedirect: '/main',
+//         failureRedirect: '/'
+//     })
+// )
+
+
+router.post('/api/login',
+    passport.authenticate('local', (req, res) => {
+        console.log('what the fuck')
+    })
+)
+
+
+// passport.authenticate('local', {
+//     successRedirect: '/main',
+//     failureRedirect: '/'
+// })
 
 
 
-
-// send instead of redirect
-// res.sendStatus(200)
 
 module.exports = router
+
 
 
 

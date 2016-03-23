@@ -28,7 +28,10 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.set('views', path.join(__dirname, 'views'))
 
 
+// use materialize for messages
 
+app.use(passport.initialize())
+app.use(passport.session())
 
 
 app.use(noteListRtr)

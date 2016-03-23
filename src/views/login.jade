@@ -5,13 +5,13 @@
 
 
     //- form(action='/login' method='POST')
-    form(ng-submit="auth.login")
+    form(ng-submit="auth.login()")
         .input-group
             label(for='email') Email
-            input#email(type='email', name='email')
+            input#email(ng-model='auth.email' type='email', name='email')
         .input-group
             label(for='pass') Pass
-            input#pass(type='password', name='password')
+            input#pass(ng-model='auth.pass' type='password', name='password')
         .input-group
             input(type='submit', value='login')
 

@@ -27,6 +27,8 @@ app.controller('authCtrl', ['$http', '$state', function($http, $state) {
             } else {
                 console.log('you did something very wrong')
             }
+        }, function(err) {
+            console.log(err)
         })
     }
 

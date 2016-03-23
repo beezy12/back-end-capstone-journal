@@ -22,7 +22,8 @@ router.post('/api/register', (req, res) => {
             if(user) {
                 res.sendStatus(403).send('there was already an email in there')
             } else {
-                User.create(req.body, (err) => {
+                User.create(req.body, (err, user) => {
+                    console.log(user)
                     if(err) throw err
 
                     res.status(200).send('created a new profile')
@@ -31,7 +32,7 @@ router.post('/api/register', (req, res) => {
         })
 
     } else {
-        res.status(200).send('passwords do not match!')
+        res.status(401).send('passwords do not match!')
     }
 })
 

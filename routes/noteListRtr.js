@@ -10,6 +10,7 @@ const authCtrl = require('../controllers/authCtrl')
 
 
 router.post('/api/register', authCtrl.registerUser)
+router.post('/api/login', authCtrl.loginUser)
 
 router.get('/api/userdata', databaseCtrl.getUserInfo)
 

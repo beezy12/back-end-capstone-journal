@@ -9,6 +9,7 @@ app.controller('authCtrl', ['$http', '$state', '$location', function($http, $sta
     self.email = ''
     self.pass = ''
     self.verify = ''
+    self.test = 'hellloooooooooo'
 
 
     // this function fires on the ng-submit='auth.register' in the form
@@ -32,7 +33,13 @@ app.controller('authCtrl', ['$http', '$state', '$location', function($http, $sta
 
 
     self.login = function() {
+        console.log('login function fired in the front end controller')
         let loginObj = {email: self.email, password: self.pass}
+
+        $http.post('/api/login', loginObj)
+         .then((data) => {
+            console.log('this ---->>', data)
+        })
     }
 
 

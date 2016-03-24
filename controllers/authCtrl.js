@@ -27,6 +27,11 @@ module.exports = {
         } else {
             res.status(401).send('passwords do not match!')
         }
+    },
+
+
+    loginUser (req, res) {
+        console.log('login function fired w req.body here ->', req.body)
     }
 
 }

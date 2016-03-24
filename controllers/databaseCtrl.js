@@ -13,11 +13,15 @@ module.exports = {
             console.log('all Ive got', everything)
             res.send(everything)
         })
+    },
+
+    saveJournalEntry (req, res) {
+        console.log('made it to the saveJournalEntry on the back end')
+        console.log('journal title in the back end --->', req.body)
     }
 
 
 
-    // register method
-    // also console.log(req.body) inside of method on back end to see what you're getting back
+
 
 }

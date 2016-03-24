@@ -19,6 +19,7 @@ router.post('/api/login', passport.authenticate('local'),
 )
 
 router.get('/api/userdata', databaseCtrl.getUserInfo)
+router.post('/api/userdata', databaseCtrl.saveJournalEntry)
 
 
 

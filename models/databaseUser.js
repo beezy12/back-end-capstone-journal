@@ -10,6 +10,7 @@ const UserSchema = new mongoose.Schema({
     email: String,
     password: String,
     entries: {}
+    // make new model for entries with an array
 })
 
 

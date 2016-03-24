@@ -2,7 +2,7 @@
 
 'use strict'
 
-app.controller('writeCtrl', [function() {
+app.controller('writeCtrl', ['$http', function($http) {
     const self = this
     console.log('inside of writeCtrl')
 
@@ -13,11 +13,11 @@ app.controller('writeCtrl', [function() {
 
 
 
-    self.saveEntry = function(user, note) {
+    self.saveEntry = function() {
         console.log('hearing the saveEntry click')
 
         let entryInfo = {title: self.title, entry: self.entry}
-
+        console.log('entryInfo',entryInfo)
         $http.post('/api/userdata', entryInfo)
     }
 

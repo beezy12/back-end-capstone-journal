@@ -4,8 +4,6 @@
 
 app.controller('writeCtrl', ['$http', function($http) {
     const self = this
-    console.log('inside of writeCtrl')
-
 
 
     self.title = ''
@@ -17,7 +15,9 @@ app.controller('writeCtrl', ['$http', function($http) {
         console.log('hearing the saveEntry click')
 
         let entryInfo = {title: self.title, entry: self.entry}
-        console.log('entryInfo',entryInfo)
+        console.log('entryInfo', entryInfo)
+
+
         $http.post('/api/userdata', entryInfo)
     }
 

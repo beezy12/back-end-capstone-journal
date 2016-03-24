@@ -21,7 +21,7 @@ app.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
         })
         .state('main', {
             url: '/main',
-            views: {
+            views: {       // views are the names of the ui-views
                 '': {      // the empty string here is the nameless ui-view in index.html
                     templateUrl: 'views/main.html',
                     controller: 'writeCtrl',

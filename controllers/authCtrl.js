@@ -3,8 +3,8 @@
 
 const passport = require('passport')
 
-require('../services/local')
 const User = require('../models/databaseUser')
+require('../services/local')
 
 
 module.exports = {

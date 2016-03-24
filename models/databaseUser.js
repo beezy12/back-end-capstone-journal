@@ -20,8 +20,7 @@ UserSchema.methods.authenticate = function (password, cb) {
     bcrypt.compare(password, this.password, cb);
 };
 
-// .pre save is a mongoose method. is an event listerne, listenging for a save event inside of mongoose. turns
-// a regular password into a hashed password
+// .pre save is a mongoose method. is an event listener, listening for a save event inside of mongoose. turns a regular password into a hashed password
 UserSchema.pre('save', function (next) {
     bcrypt.hash(this.password, BCRYPT_DIFFICULTY, (err, hash) => {
 
@@ -35,8 +34,8 @@ UserSchema.pre('save', function (next) {
 module.exports = mongoose.model('users', UserSchema)
 
 
-
-
-
 // ****  use UserSchema.pre('create') instead of UserSchema.pre('save')
 // .pre('save')  rehashes the password every time you save a user's entry
+
+
+

@@ -30,26 +30,70 @@ module.exports = {
         } else {
             res.status(401).send('passwords do not match!')
         }
-    },
-
-    loginUser : passport.authenticate('local', {
-            failureRedirect: '/#/',
-            successRedirect: '/#/main'
-    })
-
-
-
-    // loginUser (req, res) {
-    //     passport.authenticate('local', {
-    //         failureRedirect: res.sendStatus(403),
-    //         successRedirect: res.sendStatus(200)
-    //     })
-    // }
-
-
-
+    }
 }
 
+module.exports.loginUser = passport.authenticate('local', {
+            failureRedirect: '/#/',
+            successRedirect: '/#/main'
+})
 
 
 
+
+    // loginUser: passport.authenticate('local'),
+    //     function(req, res) {
+    //         // If this function gets called, authentication was successful.
+    //         // `req.user` contains the authenticated user.
+    //         res.redirect('/#/main/')
+    //         // res.sendStatus(200).send('IS THIS WORKING')
+    //     }
+
+
+
+
+
+
+
+//*******************  this could be used for something
+
+// app.post('/login',
+//   passport.authenticate('local', {
+//     successRedirect: '/loginSuccess',
+//     failureRedirect: '/loginFailure'
+//   })
+// );
+
+// app.get('/loginFailure', function(req, res, next) {
+//   res.send('Failed to authenticate');
+// });
+
+// app.get('/loginSuccess', function(req, res, next) {
+//   res.send('Successfully authenticated');
+// });
+
+
+// *************************************************************
+
+
+
+
+
+
+// app.post('/login', function(req, res, next) {
+//   passport.authenticate('local', function(err, user, info) {
+//     if (err) {
+//       return next(err); // will generate a 500 error
+//     }
+//     // Generate a JSON response reflecting authentication status
+//     if (! user) {
+//       return res.send(401,{ success : false, message : 'authentication failed' });
+//     }
+//     req.login(user, function(err){
+//       if(err){
+//         return next(err);
+//       }
+//       return res.send({ success : true, message : 'authentication succeeded' });
+//     });
+//   })(req, res, next);
+// });

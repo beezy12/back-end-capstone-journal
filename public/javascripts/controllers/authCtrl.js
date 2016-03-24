@@ -35,10 +35,16 @@ app.controller('authCtrl', ['$http', '$state', '$location', function($http, $sta
     self.login = function() {
         console.log('login function fired in the front end controller')
         let loginObj = {email: self.email, password: self.pass}
+        console.log(loginObj)
 
         $http.post('/api/login', loginObj)
-         .then((data) => {
+        .success((data, status) => {
             console.log('this ---->>', data)
+            console.log("status", status)
+            if(data.status === 200) {
+                // $location.path('/main')
+                window.location.pathname = ('/#/main')
+            }
         })
     }
 

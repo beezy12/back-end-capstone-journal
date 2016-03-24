@@ -18,15 +18,15 @@ const SESSION_SECRET = process.env.SESSION_SECRET || 'supersecret'
 const MONGODB_URL = 'mongodb://localhost:27017/scribe'
 
 
-app.set('view engine', 'jade')
+// app.set('view engine', 'jade')
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:false}))
 
-app.use(methodOverride('_method'))
+app.use(methodOverride('_method'))   // HTTP PUT and DELETE support
 
 app.use(express.static(path.join(__dirname, 'public')))
-app.set('views', path.join(__dirname, 'views'))
+// app.set('views', path.join(__dirname, 'views'))
 
 
 app.use(session({
@@ -41,8 +41,8 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 
-app.use(noteListRtr)
 
+app.use(noteListRtr)
 
 
 

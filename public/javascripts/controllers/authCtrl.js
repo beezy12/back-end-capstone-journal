@@ -38,13 +38,17 @@ app.controller('authCtrl', ['$http', '$state', '$location', function($http, $sta
         console.log(loginObj)
 
         $http.post('/api/login', loginObj)
-        .success((data, status) => {
+        .then((data) => {
             console.log('this ---->>', data)
-            console.log("status", status)
-            if(data.status === 200) {
-                // $location.path('/main')
-                window.location.pathname = ('/#/main')
-            }
+
+            $location.path('/main')
+
+            // if(data.status === 200) {
+            //     console.log('inside status')
+                // window.location.pathname = '/'
+
+        }, function (err) {
+                console.log(err)
         })
     }
 

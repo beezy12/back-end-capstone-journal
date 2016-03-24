@@ -6,6 +6,7 @@ const userModel = require('../models/databaseUser')
 module.exports = {
 
     getUserInfo (req, res) {
+        console.log(req.session.passport.user)
         userModel.find({}, (err, entries) => {
             if(err) throw err
 

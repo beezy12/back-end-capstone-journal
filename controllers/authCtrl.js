@@ -1,6 +1,9 @@
 'use strict'
 
 
+const passport = require('passport')
+
+require('../services/local')
 const User = require('../models/databaseUser')
 
 
@@ -29,12 +32,24 @@ module.exports = {
         }
     },
 
+    loginUser : passport.authenticate('local', {
+            failureRedirect: '/#/',
+            successRedirect: '/#/main'
+    })
 
-    loginUser (req, res) {
-        console.log('login function fired w req.body here ->', req.body)
-    }
+
+
+    // loginUser (req, res) {
+    //     passport.authenticate('local', {
+    //         failureRedirect: res.sendStatus(403),
+    //         successRedirect: res.sendStatus(200)
+    //     })
+    // }
+
+
 
 }
+
 
 
 

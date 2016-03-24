@@ -6,11 +6,12 @@ const userModel = require('../models/databaseUser')
 module.exports = {
 
     getUserInfo (req, res) {
-        console.log(req.session.passport.user)
-        userModel.find({}, (err, entries) => {
+        console.log('THIS IS WHAT IM LOOKING FOR', req.session.passport.user)
+        userModel.findById(req.session.passport.user, (err, everything) => {
             if(err) throw err
 
-            res.send(entries)
+            console.log('all Ive got', everything)
+            res.send(everything)
         })
     }
 

@@ -23,12 +23,14 @@ app.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
             url: '/main',
             views: {
                 '': {      // the empty string here is the nameless ui-view in index.html
-                    templateUrl: 'views/main.html'
+                    templateUrl: 'views/main.html',
+                    controller: 'writeCtrl',
+                    controllerAs: 'writer'
                 },
                 'catcher@main': {
-                    templateUrl: 'views/noteList.html'
-                    // controller: 'noteListCtrl',
-                    // controllerAs: 'noteList'
+                    templateUrl: 'views/noteList.html',
+                    controller: 'noteListCtrl',
+                    controllerAs: 'noteList'
                 }
             }
         })
@@ -36,7 +38,8 @@ app.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
             views: {
                 'catcher@main': {
                     templateUrl: 'views/writing.html',
-                    controller: 'writeCtrl'
+                    controller: 'writeCtrl',
+                    controllerAs: 'writer'
         // ^^^^ add a url if wanting to use route params
                 }
             }

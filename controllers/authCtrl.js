@@ -35,7 +35,7 @@ module.exports = {
 
 
 // instead of redirecting, it sends a status code 200 to the front
-module.exports.loginUser = passport.authenticate('local')
+// module.exports.loginUser = passport.authenticate('local')
             // failureRedirect: '/#/',
             // successRedirect: '/#/main'
 // })

@@ -2,9 +2,9 @@
 .container-fluid
     .row
         .col-md-11.col-md-offset-1
-            input#journalTitle(maxlength='32')
+            input#journalTitle(maxlength='32', ng-model="writer.title")
 
 
     .row
         .col-md-11.col-md-offset-1
-            textarea#journalBox
+            textarea#journalBox(ng-model="writer.entry")

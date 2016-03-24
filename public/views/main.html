@@ -3,7 +3,7 @@
   <nav class="navbar navbar-default mainNav">
     <div class="container-fluid"></div>
     <div class="navbar-header">
-      <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a ui-sref="main" class="navbar-brand">Home</a><a ui-sref="main.write" class="navbar-brand">New Entry</a>
+      <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a ui-sref="main" class="navbar-brand">Home</a><a ui-sref="main.write" class="navbar-brand">New Entry</a><a ng-click="writer.saveEntry()" class="navbar-brand btn">Save Entry</a>
     </div>
   </nav>
   <div ui-view="catcher"></div>

@@ -8,12 +8,17 @@ app.controller('writeCtrl', [function() {
 
 
 
+    self.title = ''
+    self.entry = ''
 
 
 
+    self.saveEntry = function(user, note) {
+        console.log('hearing the saveEntry click')
 
-    self.saveEntry = function() {
-        $http.post('models/databaseUser', dataToPass)
+        let entryInfo = {title: self.title, entry: self.entry}
+
+        $http.post('/api/userdata', entryInfo)
     }
 
 }])

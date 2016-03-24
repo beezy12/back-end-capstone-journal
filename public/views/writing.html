@@ -2,12 +2,12 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-11 col-md-offset-1">
-      <input id="journalTitle" maxlength="32">
+      <input id="journalTitle" maxlength="32" ng-model="writer.title">
     </div>
   </div>
   <div class="row">
     <div class="col-md-11 col-md-offset-1">
-      <textarea id="journalBox"></textarea>
+      <textarea id="journalBox" ng-model="writer.entry"></textarea>
     </div>
   </div>
 </div>

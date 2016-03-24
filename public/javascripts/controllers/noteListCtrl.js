@@ -12,7 +12,9 @@ app.controller('noteListCtrl', ['$http', function($http) {
     .then((userData) => {
         console.log('userData from the database ===>', userData)
 
-        self.username = userData.data[0].username
+        self.email = userData.data.email
+
+        self.id = userData.data._id
     })
 }])
 

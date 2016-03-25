@@ -6,27 +6,25 @@ const entryModel = require('../models/databaseEntries')
 
 module.exports = {
 
+
+
     getUserInfo (req, res) {
 
+        entryModel
+            .findById(req.session.passport.user)
+            .populate('users')
+            .exec((err, everything) => {
+                if(err) throw err
 
-        userModel.findById(req.session.passport.user, (err, everything) => {
-            if(err) throw err
-
-            // console.log('all Ive got', everything)
-            res.send(everything)
-        })
+                console.log('all Ive got', everything)
+                res.send(everything)
+            })
     },
 
+
+
+
     saveJournalEntry (req, res) {
-        // console.log('journal entry in the back end --->', req.body)
-        // console.log('THIS IS WHAT IM LOOKING FOR', req.session.passport.user)
-
-        // entryModel.create(req.body, (err, entry) => {
-        //     if(err) throw err
-
-        //     console.log(entry)
-        //     res.sendStatus(200)
-        // })
 
         const newEntry = new entryModel({
             title: req.body.title,
@@ -34,14 +32,20 @@ module.exports = {
             user: req.session.passport.user
         })
 
-        console.log('about to save this entry', newEntry)
-
+        console.log('about to save this entry ---> ', newEntry)
         newEntry.save((err, savedObject) => {
             if(err) throw err
 
-            res.sendStatus(200)
+            console.log('saved new entry!!!')
+            res.send({"status":"successful"})
         })
 
+        entryModel
+            .findById(req.session.passport.user)
+            .exec(function(err, user) {
+                entries.user.push(newEntry._id)
+                entries.save()
+            })
 
     }
 }
@@ -82,3 +86,4 @@ module.exports = {
 //             next();
 //         });
 // });
+

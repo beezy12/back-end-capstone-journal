@@ -11,6 +11,7 @@ app.controller('writeCtrl', ['$http', function($http) {
 
 
 
+
     self.saveEntry = function() {
         console.log('hearing the saveEntry click')
 
@@ -19,6 +20,12 @@ app.controller('writeCtrl', ['$http', function($http) {
 
 
         $http.post('/api/userdata', entryInfo)
+        .then((data) => {
+            console.log('this is what I got back after saving', data)
+
+            self.status = data.data.status
+            console.log(self.status)
+        })
     }
 
 }])

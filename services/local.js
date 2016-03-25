@@ -14,21 +14,22 @@ passport.serializeUser(function(user, done) {
 });
 
 passport.deserializeUser(function(id, done) {
+    console.log('deserializing', id)
     User.findById(id, done);
 });
 
 passport.use(new LocalStrategy ({
-        usernameField: 'email'
+        usernameField: 'email',
+        passwordField: 'password'
     },
     (email, password, done) => {
         User.findOne({ email: email }, (err, user) => {
             if (err) throw err;
-
+            console.log('shiit', user)
             if (user) {
-                console.log("valid user");
                 user.authenticate(password, (err, valid) => {
                     if (err) throw err;
-
+                    console.log(valid)
                     if (valid) {
                         console.log("Logged in");
                         done(null, user);

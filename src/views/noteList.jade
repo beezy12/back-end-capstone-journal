@@ -16,8 +16,7 @@ nav.navbar.navbar-default.mainNav
 
 
 
-div
-    h1 notelist here
-    p {{noteList.test}}
-    p {{noteList.email}}
-    p {{noteList.id}}
+.container-fluid
+    .row
+        .col-md-4(ng-repeat="entry in entries")
+                p {{entry.title}}

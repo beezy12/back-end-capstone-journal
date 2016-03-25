@@ -20,14 +20,14 @@ module.exports = {
     saveJournalEntry (req, res) {
         console.log('journal entry in the back end --->', req.body)
 
+        userModel.create(req.body, (err, entry) => {
+            if(err) throw err
 
-
-
-
+        })
     }
-
-
-
-
-
 }
+
+
+
+
+

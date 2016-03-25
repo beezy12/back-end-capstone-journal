@@ -8,8 +8,7 @@ const BCRYPT_DIFFICULTY = 11;
 
 const UserSchema = new mongoose.Schema({
     email: String,
-    password: String,
-    entries: {}
+    password: String
 })
 
 

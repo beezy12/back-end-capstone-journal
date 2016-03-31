@@ -25,16 +25,16 @@ passport.use(new LocalStrategy ({
     (email, password, done) => {
         User.findOne({ email: email }, (err, user) => {
             if (err) throw err;
-            console.log('shiit', user)
+            console.log('this is the user email found on auth User.findOne', user)
             if (user) {
                 user.authenticate(password, (err, valid) => {
                     if (err) throw err;
-                    console.log(valid)
+                    // console.log(valid)
                     if (valid) {
                         console.log("Logged in");
                         done(null, user);
                     } else {
-                        console.log("Not logged in");
+                        console.log("Not logged in")
                         done();
                     }
                 });

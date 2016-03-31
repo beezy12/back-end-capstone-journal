@@ -43,3 +43,16 @@ body {
   padding: 15px;
   background-color: transparent;
 }
+
+.output {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.bodyOutput {
+  font-size: 1.5rem;
+}
+
+.box {
+  border: .5px solid black;
+}

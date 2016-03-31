@@ -41,6 +41,7 @@ app.controller('authCtrl', ['$http', '$state', '$location', function($http, $sta
         .then((data) => {
             console.log('this ---->>', data)
 
+            // maybe use state.go here????
             $location.path('/main')
 
             // if(data.status === 200) {

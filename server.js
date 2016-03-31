@@ -26,6 +26,7 @@ app.use(bodyParser.urlencoded({extended:false}))
 app.use(methodOverride('_method'))   // HTTP PUT and DELETE support
 
 app.use(express.static(path.join(__dirname, 'public')))
+// I don't need this since it only used for backend rendering
 // app.set('views', path.join(__dirname, 'views'))
 
 

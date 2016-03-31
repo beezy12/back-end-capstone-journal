@@ -1,4 +1,4 @@
-h1 Welcome to Scribe. Now register dammit.
+h1 Welcome to Scribe.
 
 form(ng-submit="auth.register()")
         .input-group
@@ -15,3 +15,8 @@ form(ng-submit="auth.register()")
 
 
 
+//- after registering, user is redirected to the login page for authentication. I could have all
+//- this done on the same page but then I would have to alert the user that either the wrong
+//- email address or password has been entered...which is a security risk. You don't ever want
+//- anyone to know that they've gotten one of the fields right. So that's why the two auth pages
+//- are kept separate.

@@ -15,8 +15,9 @@ const UserSchema = new mongoose.Schema({
 // compare the user's password to the stored encrypted password in the db
 // this.password comes from the user's password object that was on req.body.password
 UserSchema.methods.authenticate = function (password, cb) {
-    console.log('------->', this.password)
+    console.log('this.password ------->', this.password)
     console.log('pass --->', password)
+
     bcrypt.compare(password, this.password, cb);
 };
 

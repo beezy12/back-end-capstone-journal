@@ -6,9 +6,10 @@
   </div>
 </nav>
 <div class="container-fluid">
-  <div class="row">
-    <div ng-repeat="entry in entries" class="col-md-4">
+  <div class="row output">
+    <div ng-repeat="entry in noteList.data" class="col-md-4 box">
       <p>{{entry.title}}</p>
+      <p class="bodyOutput">{{entry.entry}}</p>
     </div>
   </div>
 </div>

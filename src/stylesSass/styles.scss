@@ -17,28 +17,6 @@ body {
     background-image: url("../images/border.jpg");
 }
 
-// @font-face {
-//     font-family: 'berty';
-//     src: url('../fonts/Bertholdr Mainzer Fraktur.ttf')
-// }
-
-
-// @font-face {
-//     font-family: 'chopin':
-//     src: url('../fonts/ChopinScript.ttf')
-// }
-
-// .loginDiv{
-//     background-image: url("../images/cover.jpg");
-// }
-
-// .bookDiv {
-//     background-image: url("../images/border.jpg");
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//     min-height: 100%;
-// }
-
 .mainNav {
     background-color: rgba(0,0,0,0);
 }
@@ -62,7 +40,6 @@ body {
     font-size: 4rem;
     width: 90%;
     height: 800px;
-    // border: 1px solid #A6A6A6;
     border: none;
     outline: none;
     resize: none;
@@ -71,5 +48,16 @@ body {
     background-color: rgba(0,0,0,0);
 }
 
+// arranges entries output on main page
+.output {
+    width: 90%;
+    margin: 0 auto;
+}
 
+.bodyOutput {
+    font-size: 1.5rem;
+}
 
+.box {
+    border: .5px solid black;
+}

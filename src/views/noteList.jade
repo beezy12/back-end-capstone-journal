@@ -17,6 +17,8 @@ nav.navbar.navbar-default.mainNav
 
 
 .container-fluid
-    .row
-        .col-md-4(ng-repeat="entry in entries")
+    .row.output
+        .col-md-4.box(ng-repeat="entry in noteList.data")
                 p {{entry.title}}
+                p.bodyOutput {{entry.entry}}
+

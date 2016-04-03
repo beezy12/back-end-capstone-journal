@@ -19,6 +19,7 @@
   "dependencies": {
     "angular-ui-router": "^0.2.18",
     "angular": "^1.5.0",
-    "bootstrap": "^3.3.6"
+    "bootstrap": "^3.3.6",
+    "Materialize": "materialize#^0.97.5"
   }
 }

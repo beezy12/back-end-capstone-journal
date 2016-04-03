@@ -13,6 +13,15 @@ app.controller('noteListCtrl', ['$http', function($http) {
         self.data = userData.data
 
     })
+
+
+    self.seeNote = function() {
+        $state.go('main.write')
+    }
+
+
+
+
 }])
 
 

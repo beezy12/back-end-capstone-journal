@@ -28,7 +28,12 @@
       "no-console": 0,
       "no-unused-vars": 0,
       "no-undef": 0,
-      "no-extra-semi": 0
+      "no-extra-semi": 0,
+      "no-redeclare": 0,
+      "comma-dangle": 0,
+      "no-mixed-spaces-and-tabs": 0,
+      "no-extra-boolean-cast": 0,
+      "no-empty": 0
     }
   },
   "keywords": [],
@@ -68,3 +73,4 @@
     "webpack": "^1.12.14"
   }
 }
+

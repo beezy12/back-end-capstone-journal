@@ -1,6 +1,11 @@
-h1 Welcome to Scribe.
 
-form(ng-submit="auth.register()")
+.container-fluid
+    .row
+        .col-md-8.col-md-offset-2#scribeTitle
+            p Scribe
+    
+    
+form(ng-submit="auth.register()" class='info')
         .input-group
             label(for='email') Email
             input#email(ng-model='auth.email' type='email', name='email', autofocus, required, value=email)
@@ -13,9 +18,10 @@ form(ng-submit="auth.register()")
         .input-group
             input(type='submit', value='register')
 
-a(ui-sref="login") Already registered? Click here.
+    .row
+        p Already registered? Click #[a.ui-sref="login" here]
 
-
+//- #[a.someClass A Link!]
 
 //- after registering, user is redirected to the login page for authentication. I could have all
 //- this done on the same page but then I would have to alert the user that either the wrong

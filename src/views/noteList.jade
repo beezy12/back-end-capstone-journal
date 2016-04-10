@@ -10,6 +10,7 @@ nav.navbar.navbar-default.mainNav
 
                 a.navbar-brand(ui-sref="main") Home
                 a.navbar-brand(ui-sref="main.write") New Entry
+                a.navbar-brand(ui-sref="login") Logout
 
 
 
@@ -21,4 +22,3 @@ nav.navbar.navbar-default.mainNav
         .col-md-4.entryDiv(ng-repeat="entry in noteList.data", ng-click="entry.seeNote")
                 p {{entry.title}}
                 p.bodyOutput {{entry.entry}}
-

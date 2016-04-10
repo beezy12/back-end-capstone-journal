@@ -1,6 +1,6 @@
 .loginDiv
 
-    h1 Now log in.
+    h1 Log in.
 
     //- form(action='/login' method='POST')
     form(ng-submit="auth.login()")
@@ -8,13 +8,9 @@
             label(for='email') Email
             input#email(ng-model='auth.email' type='email', name='email')
         .input-group
-            label(for='pass') Pass
+            label(for='pass') Password
             input#pass(ng-model='auth.pass' type='password', name='password')
         .input-group
             input(type='submit', value='login')
-
-
-
-
-
-
+    
+    a(ui-sref="default") Not registered? 

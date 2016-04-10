@@ -1,28 +1,88 @@
+$font: #F2F2F2;
+$background: #00001A;
+$green: #35DF79;
+$blue: #00B9F1;
+
+
 @font-face {
     font-family: 'meddon';
     src: url('../fonts/Meddon.ttf')
 }
 
-
-
 body {
-    background-size: cover;
-    background-position: center;
-    border-top: 12px solid #4C0405;
-    color: black;
+    // background-size: cover;
+    // background-position: center;
+    // border-top: 12px solid #4C0405;
+    color: $font;
     margin: 0;
     padding: 0;
     font-size: 3rem;
-    font-family: "meddon", Times New Roman;
-    background-image: url("../images/border.jpg");
+    font-family: Cinzel, Times New Roman;
+    background-color: $background;
+    // background-image: url("../images/border.jpg");
 }
 
+.info {
+    font-family: Cinzel;
+}
+
+// Register page *****************************************************
+input[type="text"], input[type="email"], input[type="submit"], input[type='textarea'], input[type="password"] {
+  background-color: $blue;
+  color: $font;
+  border-radius: 5px;
+}
+
+#scribeTitle {
+    margin-top: 7%;
+    color: $green;
+    font-size: 5em;
+}
+
+// .center-block {
+//     float: none;
+//     display: block;
+// }
+
+
+// Main **************************************************************
 .mainNav {
     background-color: rgba(0,0,0,0);
+    border-bottom: 10px solid $font;
 }
 
+.output {
+    width: 80%;
+    margin: 0 auto;
+}
 
-// journaling area
+.entryDiv {
+    border: 1px solid $font;
+    // margin: 2px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.bodyOutput {
+    font-size: 1.5rem;
+}
+
+// mixin
+// .text-overflow() {
+//     overflow: hidden;
+//     text-overflow: hidden;
+//     white-space: no-wrap;
+// }
+//
+// .entryDiv {
+//     display: inline-block;
+//     max-width: 200px;
+//     border: 1px solid white;
+//     .text-overflow();
+// }
+
+
+// Journaling area ***************************************************
 #journalTitle {
     font-family: "meddon", Times New Roman;
     font-size: 5rem;
@@ -46,21 +106,4 @@ body {
     margin-top: 20px;
     padding: 15px;
     background-color: rgba(0,0,0,0);
-}
-
-// arranges entries output on main page
-.output {
-    width: 80%;
-    margin: 0 auto;
-}
-
-.entryDiv {
-    border: .5px solid black;
-    // margin: 2px;
-    height: 200px;
-    overflow: hidden;
-}
-
-.bodyOutput {
-    font-size: 1.5rem;
 }

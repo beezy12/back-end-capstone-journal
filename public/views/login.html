@@ -1,17 +1,17 @@
 
 <div class="loginDiv">
-  <h1>Now log in.</h1>
+  <h1>Log in.</h1>
   <form ng-submit="auth.login()">
     <div class="input-group">
       <label for="email">Email</label>
       <input id="email" ng-model="auth.email" type="email" name="email">
     </div>
     <div class="input-group">
-      <label for="pass">Pass</label>
+      <label for="pass">Password</label>
       <input id="pass" ng-model="auth.pass" type="password" name="password">
     </div>
     <div class="input-group">
       <input type="submit" value="login">
     </div>
-  </form>
+  </form><a ui-sref="default">Not registered? </a>
 </div>

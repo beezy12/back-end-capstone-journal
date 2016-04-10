@@ -4,19 +4,48 @@
 }
 
 body {
-  background-size: cover;
-  background-position: center;
-  border-top: 12px solid #4C0405;
-  color: black;
+  color: #F2F2F2;
   margin: 0;
   padding: 0;
   font-size: 3rem;
-  font-family: "meddon", Times New Roman;
-  background-image: url("../images/border.jpg");
+  font-family: Cinzel, Times New Roman;
+  background-color: #00001A;
+}
+
+.info {
+  font-family: Cinzel;
+}
+
+input[type="text"], input[type="email"], input[type="submit"], input[type='textarea'], input[type="password"] {
+  background-color: #00B9F1;
+  color: #F2F2F2;
+  border-radius: 5px;
+}
+
+#scribeTitle {
+  margin-top: 7%;
+  color: #35DF79;
+  font-size: 5em;
 }
 
 .mainNav {
   background-color: transparent;
+  border-bottom: 10px solid #F2F2F2;
+}
+
+.output {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.entryDiv {
+  border: 1px solid #F2F2F2;
+  height: 200px;
+  overflow: hidden;
+}
+
+.bodyOutput {
+  font-size: 1.5rem;
 }
 
 #journalTitle {
@@ -42,19 +71,4 @@ body {
   margin-top: 20px;
   padding: 15px;
   background-color: transparent;
-}
-
-.output {
-  width: 80%;
-  margin: 0 auto;
-}
-
-.entryDiv {
-  border: .5px solid black;
-  height: 200px;
-  overflow: hidden;
-}
-
-.bodyOutput {
-  font-size: 1.5rem;
 }

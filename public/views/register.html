@@ -1,6 +1,12 @@
 
-<h1>Welcome to Scribe.</h1>
-<form ng-submit="auth.register()">
+<div class="container-fluid">
+  <div class="row">
+    <div id="scribeTitle" class="col-md-8 col-md-offset-2">
+      <p>Scribe</p>
+    </div>
+  </div>
+</div>
+<form ng-submit="auth.register()" class="info">
   <div class="input-group">
     <label for="email">Email</label>
     <input id="email" ng-model="auth.email" type="email" name="email" autofocus required>
@@ -16,4 +22,5 @@
   <div class="input-group">
     <input type="submit" value="register">
   </div>
-</form><a ui-sref="login">Already registered? Click here.</a>
+</form>
+<p>Already registered? Click a(ui-sref="login") here.</p>

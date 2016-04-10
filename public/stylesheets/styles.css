@@ -49,9 +49,10 @@ body {
   margin: 0 auto;
 }
 
-.box {
+.entryDiv {
   border: .5px solid black;
   height: 200px;
+  overflow: hidden;
 }
 
 .bodyOutput {

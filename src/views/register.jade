@@ -4,22 +4,24 @@
         .col-md-8.col-md-offset-2#scribeTitle
             p Scribe
     
-    
-form(ng-submit="auth.register()" class='info')
-        .input-group
-            label(for='email') Email
-            input#email(ng-model='auth.email' type='email', name='email', autofocus, required, value=email)
-        .input-group
-            label(for='pass') Password
-            input#pass(ng-model='auth.pass' type='password', name='password')
-        .input-group
-            label(for='pass-verify') Password Verify
-            input#pass-verify(ng-model='auth.verify' type='password', name='verify')
-        .input-group
-            input(type='submit', value='register')
+    .row
+        .col-md-12    
+            form(ng-submit="auth.register()" class='info')
+                    .input-group
+                        label(for='email') Email
+                        input#email(ng-model='auth.email' type='email', name='email', autofocus, required, value=email)
+                    .input-group
+                        label(for='pass') Password
+                        input#pass(ng-model='auth.pass' type='password', name='password')
+                    .input-group
+                        label(for='pass-verify') Password Verify
+                        input#pass-verify(ng-model='auth.verify' type='password', name='verify')
+                    .input-group
+                        input(type='submit', value='register')
 
     .row
-        p Already registered? Click <a ui-sref="login"> here</a>
+        .col-md-12
+            p Already registered? Click <a ui-sref="login"> here</a>
 
 //- #[a.someClass A Link!]
 

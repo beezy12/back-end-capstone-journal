@@ -19,6 +19,6 @@ nav.navbar.navbar-default.mainNav
 
 .container-fluid
     .row.output
-        .col-md-4.entryDiv(ng-repeat="entry in noteList.data", ng-click="entry.seeNote")
+        .col-md-4.entryDiv.card-panel(ng-repeat="entry in noteList.data", ng-click="entry.seeNote")
                 p {{entry.title}}
                 p.bodyOutput {{entry.entry}}

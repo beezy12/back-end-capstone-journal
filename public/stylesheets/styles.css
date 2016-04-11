@@ -7,7 +7,7 @@ body {
   color: #F2F2F2;
   margin: 0;
   padding: 0;
-  font-size: 3em;
+  font-size: 2em;
   font-family: Poiret One;
   background-color: #00001A;
 }
@@ -21,7 +21,7 @@ input[type="text"], input[type="email"], input[type="submit"], input[type='texta
 #scribeTitle {
   margin-top: 7%;
   color: #35DF79;
-  font-size: 5em;
+  font-size: 4em;
   font-family: meddon;
 }
 

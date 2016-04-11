@@ -1,23 +1,23 @@
 
-.container-fluid
+.container
     .row
-        .col-md-8.col-md-offset-2#scribeTitle
+        #scribeTitle.col.s8.offset-s2
             p Scribe
     
     .row
-        .col-md-12    
+        .col.s12   
             form(ng-submit="auth.register()" class='info')
-                    .input-group
+                    .input-field.col.s12
                         label(for='email') Email
-                        input#email(ng-model='auth.email' type='email', name='email', autofocus, required, value=email)
-                    .input-group
+                        input#email.validate(ng-model='auth.email' type='email', name='email', autofocus, required, value=email)
+                    .input-field.col.s6
                         label(for='pass') Password
                         input#pass(ng-model='auth.pass' type='password', name='password')
-                    .input-group
+                    .input-field.col.s6
                         label(for='pass-verify') Password Verify
                         input#pass-verify(ng-model='auth.verify' type='password', name='verify')
-                    .input-group
-                        input(type='submit', value='register')
+                    .input-field.col.s6
+                        button.waves-effect.waves-light.btn(type='submit', value='register') Register
 
     .row
         .col-md-12

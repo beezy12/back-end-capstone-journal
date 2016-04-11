@@ -1,5 +1,5 @@
 
-.container
+.container#topBorder
     .row
         #scribeTitle.col.s8.offset-s2
             p Scribe
@@ -14,14 +14,14 @@
                         label(for='pass') Password
                         input#pass(ng-model='auth.pass' type='password', name='password')
                     .input-field.col.s6
-                        label(for='pass-verify') Password Verify
+                        label(for='pass-verify') Verify Password
                         input#pass-verify(ng-model='auth.verify' type='password', name='verify')
-                    .input-field.col.s6
+                    .input-field.col.s5.offset-s5#regButton
                         button.waves-effect.waves-light.btn(type='submit', value='register') Register
 
     .row
-        .col-md-12
-            p Already registered? Click <a ui-sref="login"> here</a>
+        .col.s4.offset-s8
+            p#already Already registered? Click <a ui-sref="login"> here</a>
 
 //- #[a.someClass A Link!]
 

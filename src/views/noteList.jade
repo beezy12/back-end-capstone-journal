@@ -8,8 +8,8 @@ nav.navbar.navbar-default.mainNav
                     span.icon-bar
                     span.icon-bar
 
-                a.navbar-brand(ui-sref="main") Home
-                a.navbar-brand(ui-sref="main.write") New Entry
+                //- a.navbar-brand(ui-sref="main").i.material-icons view_module
+                a.navbar-brand(ui-sref="main.write").i.material-icons add 
                 a.navbar-brand(ui-sref="login") Logout
 
 
@@ -19,6 +19,6 @@ nav.navbar.navbar-default.mainNav
 
 .container-fluid
     .row.output
-        .col-md-4.entryDiv.card-panel(ng-repeat="entry in noteList.data", ng-click="entry.seeNote")
-                p {{entry.title}}
-                p.bodyOutput {{entry.entry}}
+        .col-md-4.entryDiv(ng-repeat="entry in noteList.data", ng-click="entry.seeNote")
+                p.greenTitle {{entry.title}}
+                p.entryBody {{entry.entry}}

@@ -12,6 +12,10 @@ body {
   background-color: #00001A;
 }
 
+#topBorder {
+  border-top: 20px solid #00B9F1;
+}
+
 input[type="text"], input[type="email"], input[type="submit"], input[type='textarea'], input[type="password"] {
   background-color: #00B9F1;
   color: #F2F2F2;
@@ -20,14 +24,19 @@ input[type="text"], input[type="email"], input[type="submit"], input[type='texta
 
 #scribeTitle {
   margin-top: 7%;
+  margin-bottom: 7%;
   color: #35DF79;
   font-size: 4em;
   font-family: meddon;
 }
 
+#already {
+  font-size: .5em;
+}
+
 .mainNav {
   background-color: transparent;
-  border-bottom: 10px solid #F2F2F2;
+  border-bottom: 10px solid #00B9F1;
 }
 
 .output {
@@ -42,8 +51,14 @@ input[type="text"], input[type="email"], input[type="submit"], input[type='texta
   font-family: meddon;
 }
 
-.bodyOutput {
-  font-size: 1.5rem;
+.greenTitle {
+  color: #35DF79;
+  font-family: Poiret One;
+}
+
+.entryBody {
+  font-size: .6em;
+  background-color: #00001A;
 }
 
 #journalTitle {
@@ -53,7 +68,7 @@ input[type="text"], input[type="email"], input[type="submit"], input[type='texta
   text-align: center;
   height: 110px;
   width: 90%;
-  line-height: 1;
+  line-height: 3;
   vertical-align: middle;
   background-color: transparent;
 }

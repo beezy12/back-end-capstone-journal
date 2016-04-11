@@ -23,7 +23,13 @@ body {
     // border-top: 12px solid #4C0405;
 }
 
-// Register page *****************************************************
+
+// ************ Register page *****************************************************
+
+#topBorder {
+    border-top: 20px solid $blue;
+}
+
 input[type="text"], input[type="email"], input[type="submit"], input[type='textarea'], input[type="password"] {
   background-color: $blue;
   color: $font;
@@ -32,21 +38,25 @@ input[type="text"], input[type="email"], input[type="submit"], input[type='texta
 
 #scribeTitle {
     margin-top: 7%;
+    margin-bottom: 7%;
     color: $green;
     font-size: 4em;
     font-family: meddon;
 }
 
-// .center-block {
-//     float: none;
-//     display: block;
+// #regButton {
+//     margin-left: 370px;
 // }
 
+#already {
+    font-size: .5em;
+}
 
-// Main **************************************************************
+
+// ************ Main **************************************************************
 .mainNav {
     background-color: rgba(0,0,0,0);
-    border-bottom: 10px solid $font;
+    border-bottom: 10px solid $blue;
 }
 
 .output {
@@ -62,8 +72,14 @@ input[type="text"], input[type="email"], input[type="submit"], input[type='texta
     font-family: meddon;
 }
 
-.bodyOutput {
-    font-size: 1.5rem;
+.greenTitle {
+    color: $green;
+    font-family: Poiret One;
+}
+
+.entryBody {
+    font-size: .6em;
+    background-color: $background;
 }
 
 // mixin
@@ -89,7 +105,7 @@ input[type="text"], input[type="email"], input[type="submit"], input[type='texta
     text-align: center;
     height: 110px;
     width: 90%;
-    line-height: 1;
+    line-height: 3;
     vertical-align: middle;
     background-color: rgba(0,0,0,0);
 }

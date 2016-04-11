@@ -1,5 +1,5 @@
 
-<div class="container">
+<div id="topBorder" class="container">
   <div class="row">
     <div id="scribeTitle" class="col s8 offset-s2">
       <p>Scribe</p>
@@ -17,18 +17,18 @@
           <input id="pass" ng-model="auth.pass" type="password" name="password">
         </div>
         <div class="input-field col s6">
-          <label for="pass-verify">Password Verify</label>
+          <label for="pass-verify">Verify Password</label>
           <input id="pass-verify" ng-model="auth.verify" type="password" name="verify">
         </div>
-        <div class="input-field col s6">
+        <div id="regButton" class="input-field col s5 offset-s5">
           <button type="submit" value="register" class="waves-effect waves-light btn">Register</button>
         </div>
       </form>
     </div>
   </div>
   <div class="row">
-    <div class="col-md-12">
-      <p>Already registered? Click <a ui-sref="login"> here</a></p>
+    <div class="col s4 offset-s8">
+      <p id="already">Already registered? Click <a ui-sref="login"> here</a></p>
     </div>
   </div>
 </div>

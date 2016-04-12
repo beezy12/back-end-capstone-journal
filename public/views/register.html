@@ -10,7 +10,7 @@
       <form ng-submit="auth.register()" class="info">
         <div class="input-field col s12">
           <label for="email">Email</label>
-          <input id="email" ng-model="auth.email" type="email" name="email" autofocus required class="validate">
+          <input id="email" ng-model="auth.email" type="email" name="email" required class="validate">
         </div>
         <div class="input-field col s6">
           <label for="pass">Password</label>
@@ -20,7 +20,7 @@
           <label for="pass-verify">Verify Password</label>
           <input id="pass-verify" ng-model="auth.verify" type="password" name="verify">
         </div>
-        <div id="regButton" class="input-field col s5 offset-s5">
+        <div class="input-field col s5 offset-s5">
           <button type="submit" value="register" class="waves-effect waves-light btn">Register</button>
         </div>
       </form>

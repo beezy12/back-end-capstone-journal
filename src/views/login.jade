@@ -1,16 +1,20 @@
-.loginDiv
-
-    h1 Log in.
-
-    //- form(action='/login' method='POST')
-    form(ng-submit="auth.login()")
-        .input-group
-            label(for='email') Email
-            input#email(ng-model='auth.email' type='email', name='email')
-        .input-group
-            label(for='pass') Password
-            input#pass(ng-model='auth.pass' type='password', name='password')
-        .input-group
-            input(type='submit', value='login')
+.container#topBorder
+    .row
+        #scribeTitle.col.s8.offset-s2
+            p Scribe
     
-    a(ui-sref="default") Not registered? 
+    .row
+        .col.s12 
+            form(ng-submit="auth.login()")
+                .input-field.col.s6
+                    label(for='email') Email
+                    input#email(ng-model='auth.email' type='email', name='email')
+                .input-field.col.s6
+                    label(for='pass') Password
+                    input#pass(ng-model='auth.pass' type='password', name='password')
+                .input-field.col.s5.offset-s5
+                    button.waves-effect.waves-light.btn(type='submit', value='login') Login
+            
+    .row
+        .col.s2.offset-s10
+            p#already Register <a ui-sref="default"> here</a>

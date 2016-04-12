@@ -1,17 +1,30 @@
 
-<div class="loginDiv">
-  <h1>Log in.</h1>
-  <form ng-submit="auth.login()">
-    <div class="input-group">
-      <label for="email">Email</label>
-      <input id="email" ng-model="auth.email" type="email" name="email">
+<div id="topBorder" class="container">
+  <div class="row">
+    <div id="scribeTitle" class="col s8 offset-s2">
+      <p>Scribe</p>
     </div>
-    <div class="input-group">
-      <label for="pass">Password</label>
-      <input id="pass" ng-model="auth.pass" type="password" name="password">
+  </div>
+  <div class="row">
+    <div class="col s12"> 
+      <form ng-submit="auth.login()">
+        <div class="input-field col s6">
+          <label for="email">Email</label>
+          <input id="email" ng-model="auth.email" type="email" name="email">
+        </div>
+        <div class="input-field col s6">
+          <label for="pass">Password</label>
+          <input id="pass" ng-model="auth.pass" type="password" name="password">
+        </div>
+        <div class="input-field col s5 offset-s5">
+          <button type="submit" value="login" class="waves-effect waves-light btn">Login</button>
+        </div>
+      </form>
     </div>
-    <div class="input-group">
-      <input type="submit" value="login">
+  </div>
+  <div class="row">
+    <div class="col s2 offset-s10">
+      <p id="already">Register <a ui-sref="default"> here</a></p>
     </div>
-  </form><a ui-sref="default">Not registered? </a>
+  </div>
 </div>

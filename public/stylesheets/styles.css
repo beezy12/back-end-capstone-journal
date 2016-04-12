@@ -29,7 +29,7 @@ input[type="text"], input[type="email"], input[type="submit"], input[type='texta
 #scribeTitle {
   margin-top: 9%;
   margin-bottom: 7%;
-  color: #35DF79;
+  color: #4DB6AC;
   font-size: 4em;
   font-family: meddon;
 }
@@ -44,7 +44,6 @@ input[type="text"], input[type="email"], input[type="submit"], input[type='texta
 }
 
 .output {
-  width: 80%;
   margin: 0 auto;
 }
 
@@ -52,11 +51,11 @@ input[type="text"], input[type="email"], input[type="submit"], input[type='texta
   border: 1px solid #F2F2F2;
   height: 200px;
   overflow: hidden;
-  font-family: meddon;
+  font-family: Poiret One;
 }
 
 .greenTitle {
-  color: #35DF79;
+  color: #4DB6AC;
   font-family: Poiret One;
 }
 

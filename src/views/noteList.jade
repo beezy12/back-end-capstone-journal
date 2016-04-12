@@ -2,23 +2,23 @@
 nav.navbar.navbar-default.mainNav
             .container-fluid
             .navbar-header
-                button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
-                    span.sr-only Toggle navigation
-                    span.icon-bar
-                    span.icon-bar
-                    span.icon-bar
+                //- button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+                //-     span.sr-only Toggle navigation
+                    //- span.icon-bar
+                    //- span.icon-bar
+                    //- span.icon-bar
 
                 //- a.navbar-brand(ui-sref="main").i.material-icons view_module
                 a.navbar-brand(ui-sref="main.write").i.material-icons add 
-                a.navbar-brand(ui-sref="login") Logout
+                a.navbar-brand.right(ui-sref="login") Logout
 
 
 
 
 
 
-.container-fluid
+.container
     .row.output
-        .col-md-4.entryDiv(ng-repeat="entry in noteList.data", ng-click="entry.seeNote")
+        .col.s4.entryDiv(ng-repeat="entry in noteList.data", ng-click="entry.seeNote")
                 p.greenTitle {{entry.title}}
                 p.entryBody {{entry.entry}}

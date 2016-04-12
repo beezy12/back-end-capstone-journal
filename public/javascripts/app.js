@@ -27,12 +27,17 @@ app.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
                     controller: 'writeCtrl',
                     controllerAs: 'writer'
                 },
-                'catcher@main': {
+                'catcher@main': {  // catcher is the name of the second ui-view
                     templateUrl: 'views/noteList.html',
                     controller: 'noteListCtrl',
                     controllerAs: 'noteList'
                 }
             }
+        })
+        .state('single/:Id', {
+            templateUrl: 'views/oneNote.html',
+            controller: 'noteListCtrl',
+            controllerAs: 'noteList'
         })
         .state('main.write', {
             views: {
@@ -45,9 +50,5 @@ app.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
             }
         })
 
-
-    // if user navigates to route we havent specified, redirect to default state
     $urlRouterProvider.otherwise("/")
 })
-
-//

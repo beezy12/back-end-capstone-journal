@@ -10,7 +10,7 @@ const passport = require('passport')
 
 
 
-
+// auth routes here
 router.post('/api/register', authCtrl.registerUser)
 router.post('/api/login', passport.authenticate('local'),
     function (req, res) {
@@ -18,7 +18,12 @@ router.post('/api/login', passport.authenticate('local'),
     }
 )
 
+// noteList routes here
 router.get('/api/userdata', databaseCtrl.getUserInfo)
+router.get('/api/userdata/getNote/:noteId', databaseCtrl.getOneNote)
+
+
+// writing routes here
 router.post('/api/userdata', databaseCtrl.saveJournalEntry)
 
 
@@ -26,17 +31,3 @@ router.post('/api/userdata', databaseCtrl.saveJournalEntry)
 
 
 module.exports = router
-
-
-
-
-
-
-
-
-
-
-
-
-
-

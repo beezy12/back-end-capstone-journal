@@ -1,16 +1,13 @@
 
-nav.navbar.navbar-default.mainNav
-            .container-fluid
-            .navbar-header
-                //- button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
-                //-     span.sr-only Toggle navigation
-                    //- span.icon-bar
-                    //- span.icon-bar
-                    //- span.icon-bar
+nav
+    .nav-wrapper.mainNav
+        a.brand-logo Scribe
+            ul#nav-mobile.right.hide-on-med-and-down
+                li
+                    a.add(ui-sref="main.write" class="brand-logo center").i.material-icons add 
+                li
+                    a(ui-sref="login") Logout
 
-                //- a.navbar-brand(ui-sref="main").i.material-icons view_module
-                a.navbar-brand(ui-sref="main.write").i.material-icons add 
-                a.navbar-brand.right(ui-sref="login") Logout
 
 
 

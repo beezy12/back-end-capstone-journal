@@ -1,8 +1,10 @@
 
-<nav class="navbar navbar-default mainNav">
-  <div class="container-fluid"></div>
-  <div class="navbar-header"><a ui-sref="main.write" class="navbar-brand i material-icons">add </a><a ui-sref="login" class="navbar-brand right">Logout</a>
-  </div>
+<nav>
+  <div class="nav-wrapper mainNav"><a class="brand-logo">Scribe
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a ui-sref="main.write" class="add brand-logo center i material-icons">add </a></li>
+        <li><a ui-sref="login">Logout</a></li>
+      </ul></a></div>
 </nav>
 <div class="container">
   <div class="row output">

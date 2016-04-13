@@ -34,7 +34,8 @@ app.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
                 }
             }
         })
-        .state('single/:Id', {
+        .state('single', {
+            url: '/single/:Id',
             templateUrl: 'views/oneNote.html',
             controller: 'noteListCtrl',
             controllerAs: 'noteList'

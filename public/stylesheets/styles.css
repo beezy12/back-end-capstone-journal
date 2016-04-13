@@ -16,6 +16,10 @@ body {
   width: 90%;
 }
 
+a:link {
+  text-decoration: none;
+}
+
 #topBorder {
   border-top: 10px solid #00B9F1;
 }

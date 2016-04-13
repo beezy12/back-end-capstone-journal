@@ -8,24 +8,23 @@ app.controller('writeCtrl', ['$http', function($http) {
 
     self.title = ''
     self.entry = ''
-
+// if there is an id, load all the note data associated with that id, if not, load blank page
+    // see if an id is in the url
+    // if id is in the url
+        // get request for the data by id
+        // then fill in the text areas/inputs with that data
+    // else
+        // do nothing
 
 // TO GET RID OF DUPLICATE ENTRIES, RUN A DB CHECK WHEN SAVE IS CLICKED AND USE A LODASH FILTER
 // TO REMOVE THE DUPLICATE.
 
     self.saveEntry = function() {
-        // console.log('hearing the saveEntry click')
-
         let entryInfo = {title: self.title, entry: self.entry}
-        // console.log('entryInfo', entryInfo)
-
 
         $http.post('/api/userdata', entryInfo)
         .then((data) => {
-            // console.log('this is what I got back after saving', data)
-
             self.status = data.data.status
-            // console.log(self.status)
         })
     }
 

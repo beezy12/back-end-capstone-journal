@@ -12,17 +12,19 @@ app.controller('noteListCtrl', ['$http', function($http) {
         self.data = userData.data
     })
 
-
+    // $state.params to parse url to get id   (log and inject into controller with $state)
+    // window.location   then use split by slash and grab the last item in the array with arrayname[array.length-1]
     // function shows full page journal entry on click
-    self.seeNote = (entry) => {
-        // get using note id (entry) and render page with note showing
-        $http.get(`/api/userdata/getNote/${entry}`)
-        .then((foundNote) => {
-            console.log('this is the note I wanted', foundNote)
-            // now use state.go with the foundNote info???
 
-        })
-    }
+
+
+    
+    // self.seeNote = (entry) => {
+    //     $http.get(`/api/userdata/getNote/${entry}`)
+    //     .then((foundNote) => {
+    //         console.log('this is the note I wanted', foundNote)
+    //     })
+    // }
 }])
 
 

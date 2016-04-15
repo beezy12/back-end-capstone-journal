@@ -11,7 +11,6 @@ app.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
             templateUrl: 'views/register.html',
             controller: 'authCtrl',
             controllerAs: 'auth'
-            // when logged in, use state.go to route to the main state below
         })
         .state('login', {
             url: '/login',

@@ -2,7 +2,7 @@
 
 'use strict'
 
-app.controller('writeCtrl', ['$http', function($http) {
+app.controller('writeCtrl', ['$http', '$state', function($http, $state) {
     const self = this
 
 

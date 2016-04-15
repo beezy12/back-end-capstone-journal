@@ -1,9 +1,9 @@
 'use strict'
 
-app.controller('noteListCtrl', ['$http', function($http) {
+app.controller('noteListCtrl', ['$http', '$state', function($http, $state) {
 
     const self = this
-
+    // $scope.data = ''
 
     // this fires on page load. retrieves users data from db for display on DOM (journal entries)
     $http.get('/api/userdata')
@@ -24,12 +24,10 @@ app.controller('noteListCtrl', ['$http', function($http) {
     // function shows full page journal entry on click
 
 
-    // self.seeNote = (entry) => {
-    //     $http.get(`/api/userdata/getNote/${entry}`)
-    //     .then((foundNote) => {
-    //         console.log('this is the note I wanted', foundNote)
-    //     })
-    // }
+    self.seeNote = (entry) => {
+        console.log('entry id', entry)
+        $state.go('single', {entry: entry});
+    }
 }])
 
 

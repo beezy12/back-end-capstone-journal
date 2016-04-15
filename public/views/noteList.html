@@ -3,10 +3,6 @@
   <div class="container-fluid"></div>
   <div class="navbar-header"><a ui-sref="main.write" class="navbar-brand i material-icons">add </a><a ui-sref="login" class="navbar-brand right">Logout</a></div>
 </nav>
-<div class="row output">
-  <a href="#/single/{{entry._id}}" ng-repeat="entry in noteList.data" class="col s4 entryDiv">
-
+<div class="row output"> <a ng-repeat="entry in noteList.data" ui-sref="single({id: entry._id})" class="col s4 entryDiv">
     <p class="greenTitle">{{entry.title}}</p>
-    <p class="entryBody">{{entry.entry}}</p></a>
-  </div>
-</div>
+    <p class="entryBody">{{entry.entry}}</p></a></div>

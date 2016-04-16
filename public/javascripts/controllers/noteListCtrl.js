@@ -11,23 +11,6 @@ app.controller('noteListCtrl', ['$http', '$state', function($http, $state) {
         console.log('userData from the database ===>', userData)
         self.data = userData.data
     })
-
-    // $state.params to get id from url   (log and inject into controller with $state)
-    // or
-    // window.location   then use split by slash (/) and grab the last item in the array with arrayname[array.length-1]
-
-
-// ****** SO YOU DO AN NG-CLICK, PASS IN THE ENTRY ID INTO THE FUNCTION BELOW, IN THERE CALL STATE.GO THAT
-// FIRES THE NEXT PAGE AND CONTROLLER, AND PASS THE ID AS A PARAMETER OF STATE.GO and do the http.get there.
- // BOOM
-
-    // function shows full page journal entry on click
-
-
-    self.seeNote = (entry) => {
-        console.log('entry id', entry)
-        $state.go('single', {entry: entry});
-    }
 }])
 
 

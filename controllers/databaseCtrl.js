@@ -32,12 +32,10 @@ module.exports = {
     },
 
     getOneNote (req, res) {
+        console.log('*** ayoooo req.params here on the back end', req.params)
         entryModel.findById(`${req.params.noteId}`, (err, foundNote) => {
-            // console.log('******this is the note I want from the db', foundNote)
+            console.log('******this is the note I want from the db', foundNote)
             res.send(foundNote)
         })
     }
-
-
-
 }

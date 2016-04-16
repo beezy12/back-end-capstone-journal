@@ -28,6 +28,4 @@ router.post('/api/userdata', databaseCtrl.saveJournalEntry)
 
 
 
-
-
 module.exports = router

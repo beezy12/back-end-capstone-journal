@@ -2,18 +2,22 @@
 <nav class="navbar navbar-default mainNav">
   <div class="container-fluid"></div>
   <div class="navbar-header">
-    <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a ui-sref="main" class="navbar-brand i material-icons">view_module</a><a ng-click="writer.saveEntry()" class="navbar-brand btn right-align i material-icons">save</a>
+    <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" class="navbar-toggle collapsed">
+    </button><a ui-sref="main" class="navbar-brand i material-icons">view_module</a><a ng-click="writer.saveEntry()" class="navbar-brand btn right-align i material-icons">save</a>
   </div>
 </nav>
-<div class="container-fluid">
+<div class="container">
   <div class="row">
     <div class="col-md-11 col-md-offset-1">
-      <input id="journalTitle" maxlength="32" ng-model="writer.title">
+      <p>{{oneNote.noteInfo.data.title}}</p>
+      <p>{{oneNote.noteInfo.data.entry}}</p>
     </div>
   </div>
   <div class="row">
     <div class="col-md-11 col-md-offset-1">
-      <textarea id="journalBox" ng-model="writer.entry"></textarea>
+      <textarea id="journalBox" ng-model="writer.entry">
+        <p>{{oneNote.noteInfo.data.entry}}</p>
+      </textarea>
     </div>
   </div>
 </div>

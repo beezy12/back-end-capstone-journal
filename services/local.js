@@ -37,11 +37,11 @@ passport.use(new LocalStrategy ({
                         console.log("Not logged in")
                         done();
                     }
-                });
+                })
             } else {
                 console.log("No user");
                 done();
             }
-        });
+        })
     })
-);
+)

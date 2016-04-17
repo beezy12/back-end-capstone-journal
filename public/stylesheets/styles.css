@@ -71,14 +71,15 @@ input[type="text"], input[type="email"], input[type="submit"], input[type='texta
 
 #journalTitle {
   font-family: "meddon", Times New Roman;
-  font-size: 3em;
+  font-size: 1.8em;
   outline: none;
   text-align: center;
   height: 110px;
   width: 90%;
-  line-height: 3;
+  line-height: 1;
   vertical-align: middle;
   background-color: transparent;
+  color: green;
 }
 
 #journalBox {

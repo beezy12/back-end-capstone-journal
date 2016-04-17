@@ -6,18 +6,15 @@
     </button><a ui-sref="main" class="navbar-brand i material-icons">view_module</a><a ng-click="writer.saveEntry()" class="navbar-brand btn right-align i material-icons">save</a>
   </div>
 </nav>
-<div class="container">
+<div class="container-fluid">
   <div class="row">
-    <div class="col-md-11 col-md-offset-1">
+    <div id="journalTitle" class="col-md-11 col-md-offset-1">
       <p>{{oneNote.noteInfo.data.title}}</p>
-      <p>{{oneNote.noteInfo.data.entry}}</p>
     </div>
   </div>
   <div class="row">
-    <div class="col-md-11 col-md-offset-1">
-      <textarea id="journalBox" ng-model="writer.entry">
-        <p>{{oneNote.noteInfo.data.entry}}</p>
-      </textarea>
+    <div id="journalBox" class="col-md-11 col-md-offset-1">
+      <p>{{oneNote.noteInfo.data.entry}}</p>
     </div>
   </div>
 </div>

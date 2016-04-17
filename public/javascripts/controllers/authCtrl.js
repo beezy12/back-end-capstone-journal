@@ -39,7 +39,7 @@ app.controller('authCtrl', ['$http', '$state', '$location', function($http, $sta
 
         $http.post('/api/login', loginObj)
         .then((data) => {
-            console.log('this ---->>', data)
+            console.log('this is the logged in user data ---->>', data)
 
             // maybe use state.go here????
             $location.path('/main')
@@ -57,7 +57,3 @@ app.controller('authCtrl', ['$http', '$state', '$location', function($http, $sta
 
 
 }])
-
-
-
-

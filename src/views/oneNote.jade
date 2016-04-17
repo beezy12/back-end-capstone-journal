@@ -13,21 +13,16 @@ nav.navbar.navbar-default.mainNav
 
 
 
-
-//- {{writer.status}}
-
-.container
+.container-fluid
     .row
-        .col-md-11.col-md-offset-1
+        .col-md-11.col-md-offset-1#journalTitle
             //- input#journalTitle
             p {{oneNote.noteInfo.data.title}}
-            
+
+    .row
+        .col-md-11.col-md-offset-1#journalBox
+            //- textarea#journalBox(ng-model="writer.entry")
             p {{oneNote.noteInfo.data.entry}}
 
 
 
-
-    .row
-        .col-md-11.col-md-offset-1
-            textarea#journalBox(ng-model="writer.entry")
-                p {{oneNote.noteInfo.data.entry}}

@@ -9,21 +9,18 @@ nav.navbar.navbar-default.mainNav
                     span.icon-bar
 
                 a.navbar-brand(ui-sref="main").i.material-icons view_module
-                //- a.navbar-brand(ui-sref="main.write").i.material-icons add 
                 a.navbar-brand.btn.right-align(ng-click="writer.saveEntry()").i.material-icons save
 
 
 
-
-//- {{writer.status}}
-
 .container-fluid
     .row
-        .col-md-11.col-md-offset-1
-            input#journalTitle(maxlength='32', ng-model="writer.title")
+        .col-md-11.col-md-offset-1.writingTitle
+            input#journalTitle(maxlength='30', ng-model="writer.title")
 
 
 
     .row
         .col-md-11.col-md-offset-1
             textarea#journalBox(ng-model="writer.entry")
+

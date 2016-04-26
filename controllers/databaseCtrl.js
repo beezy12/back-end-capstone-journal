@@ -37,5 +37,15 @@ module.exports = {
             console.log('******this is the note I want from the db', foundNote)
             res.send(foundNote)
         })
+    },
+
+    deleteEntry (req, res) {
+        console.log('this is the deleted note', req.params)
+        entryModel.remove({ '_id': `${req.params.noteId}` }, function(err) {
+            if(err) throw err
+
+            res.send('successfully deleted the entry')
+        })
     }
+
 }

@@ -2,12 +2,12 @@
 nav.navbar.navbar-default.mainNav
             .container-fluid
             .navbar-header
-                a.navbar-brand(ui-sref="main.write").i.material-icons add 
+                a.navbar-brand(ui-sref="main.write").i.material-icons add
                 a.navbar-brand.right(ui-sref="login") Logout
 
 
 
-.row.output  
+.row.output
     a.col.s4.entryDiv(ng-repeat="entry in noteList.data", ui-sref='single({id: entry._id})')
             p.greenTitle {{entry.title}}
             p.entryBody {{entry.entry}}

@@ -12,6 +12,7 @@ app.controller('writeCtrl', ['$http', '$state', function($http, $state) {
     // TO REMOVE THE DUPLICATE.
 
     self.saveEntry = function() {
+        // console.log('heard the save click')
         let entryInfo = {title: self.title, entry: self.entry}
 
         $http.post('/api/userdata', entryInfo)

@@ -22,16 +22,16 @@ a:link {
 
 #topBorder {
   border-top: 10px solid #00B9F1;
+  width: 70%;
 }
 
 input[type="text"], input[type="email"], input[type="submit"], input[type='textarea'], input[type="password"] {
-  background-color: #00B9F1;
   color: #F2F2F2;
   border-radius: 5px;
 }
 
 #scribeTitle {
-  margin-top: 9%;
+  margin-top: 13%;
   margin-bottom: 7%;
   color: #4DB6AC;
   font-size: 4em;
@@ -40,6 +40,11 @@ input[type="text"], input[type="email"], input[type="submit"], input[type='texta
 
 #already {
   font-size: .5em;
+}
+
+.addIcon {
+  margin: 0;
+  font-size: 50px;
 }
 
 .mainNav {
@@ -67,6 +72,10 @@ input[type="text"], input[type="email"], input[type="submit"], input[type='texta
 .entryBody {
   font-size: .6em;
   background-color: #000030;
+}
+
+.viewList {
+  font-size: 1em;
 }
 
 #journalTitle {

@@ -30,16 +30,17 @@ a:link {
 
 #topBorder {
     border-top: 10px solid $blue;
+    width: 70%;
 }
 
 input[type="text"], input[type="email"], input[type="submit"], input[type='textarea'], input[type="password"] {
-  background-color: $blue;
+  // background-color: $blue;
   color: $font;
   border-radius: 5px;
 }
 
 #scribeTitle {
-    margin-top: 9%;
+    margin-top: 13%;
     margin-bottom: 7%;
     color: $green;
     font-size: 4em;
@@ -52,6 +53,11 @@ input[type="text"], input[type="email"], input[type="submit"], input[type='texta
 
 
 // ************ Main **************************************************************
+
+.addIcon {
+    margin: 0;
+    font-size: 50px;
+}
 
 .mainNav {
     background-color: rgba(0,0,0,0);
@@ -85,6 +91,10 @@ input[type="text"], input[type="email"], input[type="submit"], input[type='texta
 
 // Journaling area ***************************************************
 
+.viewList {
+    font-size: 1em;
+}
+
 #journalTitle {
     font-family: "meddon", Times New Roman;
     font-size: 1.8em;
@@ -110,3 +120,5 @@ input[type="text"], input[type="email"], input[type="submit"], input[type='texta
     padding: 15px;
     background-color: rgba(0,0,0,0);
 }
+
+

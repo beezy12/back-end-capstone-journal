@@ -25,6 +25,7 @@ router.get('/api/userdata/getNote/:noteId', databaseCtrl.getOneNote)
 
 // writing routes here
 router.post('/api/userdata', databaseCtrl.saveJournalEntry)
+router.delete('/api/userdata/deleteEntry/:noteId', databaseCtrl.deleteEntry)
 
 
 

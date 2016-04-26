@@ -8,8 +8,10 @@ nav.navbar.navbar-default.mainNav
             //- span.icon-bar
             //- span.icon-bar
 
-        a.navbar-brand(ui-sref="main").i.material-icons view_module
-        a.navbar-brand.btn.right-align(ng-click="writer.saveEntry()").i.material-icons save
+        a.navbar-brand.viewList(ui-sref="main").i.material-icons view_module
+        a.navbar-brand.btn(ng-click="oneNote.saveEntry()") save
+        a.navbar-brand.btn(ng-click='edit()') edit
+        a.navbar-brand.btn(ng-click='oneNote.deleteEntry()') delete
 
 
 

@@ -79,7 +79,7 @@ input[type="text"], input[type="email"], input[type="submit"], input[type='texta
 }
 
 #journalTitle {
-  font-family: "meddon", Times New Roman;
+  font-family: "Poiret One", Times New Roman;
   font-size: 1.8em;
   outline: none;
   text-align: center;
@@ -92,7 +92,7 @@ input[type="text"], input[type="email"], input[type="submit"], input[type='texta
 }
 
 #journalBox {
-  font-family: "meddon", Times New Roman;
+  font-family: "Poiret One", Times New Roman;
   font-size: 1em;
   width: 90%;
   height: 800px;

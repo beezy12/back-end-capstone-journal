@@ -15,8 +15,13 @@ const noteListRtr = require('./routes/noteListRtr')
 
 const PORT = process.env.PORT || 3000
 const SESSION_SECRET = process.env.SESSION_SECRET || 'supersecret'
-const MONGODB_URL = 'mongodb://localhost:27017/scribe'
 
+const devUrl = 'mongodb://localhost:27017/scribe'
+
+const prodUrl = 'mongodb://' + process.env.MONGODB_USER + ':' + process.env.MONGODB_PASSWORD +
+'@ds021731.mlab.com:21731/scribe'
+
+const MONGODB_URL =  process.env.NODE_ENV === 'development' ? devUrl : prodUrl
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:false}))

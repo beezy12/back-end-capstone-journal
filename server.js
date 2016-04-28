@@ -23,6 +23,8 @@ const prodUrl = 'mongodb://' + process.env.MONGODB_USER + ':' + process.env.MONG
 
 const MONGODB_URL =  process.env.NODE_ENV === 'development' ? devUrl : prodUrl
 
+const REDIS_URL = process.env.REDIS_URL || 'redis://localhost:6379'
+
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:false}))
 
@@ -30,11 +32,9 @@ app.use(methodOverride('_method'))   // HTTP PUT and DELETE support
 
 app.use(express.static(path.join(__dirname, 'public')))
 
-
-
 app.use(session({
     secret: SESSION_SECRET,
-    store: new RedisStore(),
+    store: new RedisStore({ url: REDIS_URL }),
     resave: false,
     saveUninitialized: true
 }))

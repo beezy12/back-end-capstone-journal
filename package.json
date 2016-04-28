@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "NODE_ENV=development nodemon server.js",
     "start": "NODE_ENV=production node server.js",
-    "bower": "bower"
+    "bower": "bower",
+    "postinstall": "node node_modules/bower/bin/bower install"
   },
   "repository": {
     "type": "git",

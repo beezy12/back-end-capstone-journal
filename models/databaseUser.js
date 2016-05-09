@@ -9,7 +9,7 @@ const BCRYPT_DIFFICULTY = 11;
 const UserSchema = new mongoose.Schema({
     email: String,
     password: String
-})
+});
 
 
 // compare the user's password to the stored encrypted password in the db

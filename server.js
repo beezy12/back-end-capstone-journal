@@ -8,7 +8,7 @@ const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
 const session = require('express-session')
 const RedisStore = require('connect-redis')(session)
-const flash = require('connect-flash')
+// const flash = require('connect-flash')
 const passport = require('passport')
 
 const noteListRtr = require('./routes/noteListRtr')
@@ -24,6 +24,8 @@ const prodUrl = 'mongodb://' + process.env.MONGODB_USER + ':' + process.env.MONG
 const MONGODB_URL =  process.env.NODE_ENV === 'development' ? devUrl : prodUrl
 
 const REDIS_URL = process.env.REDIS_URL || 'redis://localhost:6379'
+
+
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:false}))

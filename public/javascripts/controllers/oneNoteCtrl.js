@@ -23,6 +23,4 @@ app.controller('oneNoteCtrl', ['$http', '$state', '$stateParams', function($http
     }
 
 
-
-
 }])

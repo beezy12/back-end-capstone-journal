@@ -8,7 +8,6 @@ const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
 const session = require('express-session')
 const RedisStore = require('connect-redis')(session)
-// const flash = require('connect-flash')
 const passport = require('passport')
 
 const noteListRtr = require('./routes/noteListRtr')
@@ -41,7 +40,6 @@ app.use(session({
     saveUninitialized: true
 }))
 
-// app.use(flash())
 app.use(passport.initialize())
 app.use(passport.session())
 

@@ -10,21 +10,22 @@ nav.navbar.navbar-default.mainNav
 
         a.navbar-brand.viewList(ui-sref="main").i.material-icons view_module
         a.navbar-brand.btn(ng-click="oneNote.saveEntry()") save
-        a.navbar-brand.btn(ng-click="editing = !editing") edit
+        //- a.navbar-brand.btn(ng-click="editing = !editing") edit
         a.navbar-brand.btn(ng-click='oneNote.deleteEntry()') delete
 
 
 
 .container-fluid
     .row
-        .col-md-11.col-md-offset-1#journalTitle
-            //- input#journalTitle
-            p {{oneNote.noteInfo.data.title}}
+        .col-md-11.col-md-offset-1
+            label#journalTitle(ng-click="editing = true" ng-hide="editing"){{oneNote.noteInfo.data.title}}
+            input#journalTitle(ng-change="oneNote.noteInfo.edited = true" ng-blur="editing = false" ng-show="editing" ng-model="oneNote.noteInfo.data.title")
+
 
     .row
         .col-md-11.col-md-offset-1#journalBox
             //- textarea#journalBox(ng-model="writer.entry")
-            p {{oneNote.noteInfo.data.entry}}
+            {{oneNote.noteInfo.data.entry}}
 
 
 

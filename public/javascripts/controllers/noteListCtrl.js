@@ -3,7 +3,7 @@
 app.controller('noteListCtrl', ['$http', '$state', function($http, $state) {
 
     const self = this
-    // $scope.data = ''
+
 
     // this fires on page load. retrieves users data from db for display on DOM (journal entries)
     $http.get('/api/userdata')

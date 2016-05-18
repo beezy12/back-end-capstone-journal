@@ -3,18 +3,18 @@
   <div class="container-fluid"></div>
   <div class="navbar-header">
     <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" class="navbar-toggle collapsed">
-    </button><a ui-sref="main" class="navbar-brand viewList i material-icons">view_module</a><a ng-click="oneNote.saveEntry()" class="navbar-brand btn">save</a><a ng-click="editing = !editing" class="navbar-brand btn">edit</a><a ng-click="oneNote.deleteEntry()" class="navbar-brand btn">delete</a>
+    </button><a ui-sref="main" class="navbar-brand viewList i material-icons">view_module</a><a ng-click="oneNote.saveEntry()" class="navbar-brand btn">save</a><a ng-click="oneNote.deleteEntry()" class="navbar-brand btn">delete</a>
   </div>
 </nav>
 <div class="container-fluid">
   <div class="row">
-    <div id="journalTitle" class="col-md-11 col-md-offset-1">
-      <p>{{oneNote.noteInfo.data.title}}</p>
+    <div class="col-md-11 col-md-offset-1">
+      <label id="journalTitle" ng-click="editing = true" ng-hide="editing">{{oneNote.noteInfo.data.title}}</label>
+      <input id="journalTitle" ng-change="oneNote.noteInfo.edited = true" ng-blur="editing = false" ng-show="editing" ng-model="oneNote.noteInfo.data.title">
     </div>
   </div>
   <div class="row">
-    <div id="journalBox" class="col-md-11 col-md-offset-1">
-      <p>{{oneNote.noteInfo.data.entry}}</p>
+    <div id="journalBox" class="col-md-11 col-md-offset-1">{{oneNote.noteInfo.data.entry}}
     </div>
   </div>
 </div>

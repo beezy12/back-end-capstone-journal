@@ -19,13 +19,13 @@ nav.navbar.navbar-default.mainNav
     .row
         .col-md-11.col-md-offset-1
             label#journalTitle(ng-click="editing = true" ng-hide="editing"){{oneNote.noteInfo.data.title}}
-            input#journalTitle(ng-change="oneNote.noteInfo.edited = true" ng-blur="editing = false" ng-show="editing" ng-model="oneNote.noteInfo.data.title")
+            input#journalTitle(ng-change="oneNote.edited = true" ng-blur="editing = false" ng-show="editing" ng-model="oneNote.noteInfo.data.title")
 
 
     .row
-        .col-md-11.col-md-offset-1#journalBox
-            //- textarea#journalBox(ng-model="writer.entry")
-            {{oneNote.noteInfo.data.entry}}
+        .col-md-11.col-md-offset-1
+            label#journalBox(ng-click="editing = true" ng-hide="editing"){{oneNote.noteInfo.data.entry}}
+            textarea#journalBox(ng-change="oneNote.edited = true" ng-blur="editing = false" ng-show="editing" ng-model="oneNote.noteInfo.data.entry")
 
 
 

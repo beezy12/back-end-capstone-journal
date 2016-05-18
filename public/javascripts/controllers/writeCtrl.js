@@ -11,14 +11,19 @@ app.controller('writeCtrl', ['$http', '$state', function($http, $state) {
     // TO GET RID OF DUPLICATE ENTRIES, RUN A DB CHECK WHEN SAVE IS CLICKED AND USE A LODASH FILTER
     // TO REMOVE THE DUPLICATE.
 
+    var saved = false
     self.saveEntry = function() {
         // console.log('heard the save click')
-        let entryInfo = {title: self.title, entry: self.entry}
+        if(!saved) {
+            let entryInfo = {title: self.title, entry: self.entry}
 
-        $http.post('/api/userdata', entryInfo)
-        .then((data) => {
-            self.status = data.data.status
-        })
+            $http.post('/api/userdata', entryInfo)
+            .then((data) => {
+                self.status = data.data.status
+                saved = true
+            })
+        }
+
     }
 
 }])

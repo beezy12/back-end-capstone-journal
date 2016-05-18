@@ -13,6 +13,7 @@ const passport = require('passport')
 const noteListRtr = require('./routes/noteListRtr')
 
 const PORT = process.env.PORT || 3000
+// express-session needs this secret
 const SESSION_SECRET = process.env.SESSION_SECRET || 'supersecret'
 
 const devUrl = 'mongodb://localhost:27017/scribe'

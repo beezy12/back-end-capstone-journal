@@ -1,9 +1,11 @@
 'use strict'
 
 app.controller('oneNoteCtrl', ['$http', '$state', '$stateParams', function($http, $state, $stateParams) {
+
     const self = this
 
     let entry = $stateParams;
+    console.log('this is the selected entry', entry)
 
 
     $http.get(`/api/userdata/getNote/${entry.id}`)
@@ -22,15 +24,19 @@ app.controller('oneNoteCtrl', ['$http', '$state', '$stateParams', function($http
         })
     }
 
-
+    var saved = false
     self.saveEntry = function() {
-        console.log('heard the save click')
-        let entryInfo = {title: self.title, entry: self.entry}
 
-        $http.post('/api/userdata', entryInfo)
-        .then((data) => {
-            self.status = data.data.status
-        })
+        if(!saved) {
+            let entryInfo = {title: self.title, entry: self.entry}
+
+            $http.post('/api/userdata', entryInfo)
+            .then((data) => {
+                self.status = data.data.status
+                saved = true
+            })
+
+        }
     }
 
 

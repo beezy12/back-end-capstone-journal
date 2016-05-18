@@ -51,6 +51,7 @@ gulp.task('sass', function() {
                // or this for errors. this fires the function above if there's an error.
                // only works if plumber is not installed.
                .on('error', errorLog)
+               // prefix slaps all the vendor prefixes on (safari, chrome, opera)
                .pipe(prefix())
                .pipe(gulp.dest('public/stylesheets/'))
                // .pipe(reload({stream: true}))

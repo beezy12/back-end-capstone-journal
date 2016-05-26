@@ -24,7 +24,7 @@ app.controller('oneNoteCtrl', ['$http', '$state', '$stateParams', function($http
         })
     }
 
-    var saved = false
+    let saved = false
     self.saveEntry = function() {
 
         if(!saved) {

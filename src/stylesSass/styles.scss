@@ -76,7 +76,16 @@ input[type="text"], input[type="email"], input[type="submit"], input[type='texta
     overflow: hidden;
     font-family: Poiret One;
     // margin: 2.5px 5px;
+    // -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+    // transition: width 2s, height 2s, background-color 2s, transform 2s;
 }
+
+.slowMo {
+    // -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+    // transition: width 2s, height 2s, background-color 2s, transform 2s; }
+}
+
+
 
 .greenTitle {
     color: $green;
@@ -96,7 +105,7 @@ input[type="text"], input[type="email"], input[type="submit"], input[type='texta
 }
 
 .moveDown {
-    margin-top: 29px;
+    margin-top: 29px;h
 }
 
 #journalTitle {

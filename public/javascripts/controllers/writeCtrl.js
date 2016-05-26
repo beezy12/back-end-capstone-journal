@@ -9,7 +9,7 @@ app.controller('writeCtrl', ['$http', '$state', function($http, $state) {
     self.entry = ''
 
     // TO GET RID OF DUPLICATE ENTRIES, RUN A DB CHECK WHEN SAVE IS CLICKED AND USE A LODASH FILTER
-    // TO REMOVE THE DUPLICATE.
+    // TO REMOVE THE DUPLICATE???
 
     var saved = false
     self.saveEntry = function() {

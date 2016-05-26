@@ -14,6 +14,7 @@ app.controller('authCtrl', ['$http', '$state', '$location', function($http, $sta
 
     // this function fires on the ng-submit='auth.register' in the form
     self.register = function() {
+        // email, pass, and verify came from their ng-models in register.jade
         let obj = {email: self.email, password: self.pass, verify: self.verify}
 
         $http.post('/api/register', obj)

@@ -3,10 +3,7 @@ nav.navbar.navbar-default.mainNav
     .container-fluid
     .navbar-header
         button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
-            //- span.sr-only Toggle navigation
-            //- span.icon-bar
-            //- span.icon-bar
-            //- span.icon-bar
+
 
         a.navbar-brand.viewList(ui-sref="main").i.material-icons view_module
         a.navbar-brand.btn(ng-click="oneNote.saveEntry()") save
@@ -19,7 +16,7 @@ nav.navbar.navbar-default.mainNav
     .row
         .col-md-11.col-md-offset-1
             label#journalTitle.moveDown(ng-click="editingTitle = true" ng-hide="editingTitle"){{oneNote.noteInfo.data.title}}
-            input#journalTitle(ng-change="oneNote.edited = true" ng-blur="editingTitle = false" ng-show="editingTitle" ng-model="oneNote.noteInfo.data.title")
+            input#journalTitle(ng-change="oneNote.edited = true ; saveTheEdit()" ng-blur="editingTitle = false" ng-show="editingTitle" ng-model="oneNote.noteInfo.data.title")
 
 
     .row

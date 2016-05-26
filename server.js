@@ -26,12 +26,13 @@ const MONGODB_URL =  process.env.NODE_ENV === 'development' ? devUrl : prodUrl
 const REDIS_URL = process.env.REDIS_URL || 'redis://localhost:6379'
 
 
-
+// parses the text request data from HTML forms as JSON and exposes the resulting object on req.body
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:false}))
 
 app.use(methodOverride('_method'))   // HTTP PUT and DELETE support
 
+// tells express(?) where to look for static files
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.use(session({
@@ -42,7 +43,7 @@ app.use(session({
 }))
 
 app.use(passport.initialize())
-app.use(passport.session())
+app.use(passport.session())  // If your application uses persistent login sessions, got to use this
 
 
 // this redirects to the back-end routes

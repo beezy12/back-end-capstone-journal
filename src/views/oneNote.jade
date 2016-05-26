@@ -22,7 +22,7 @@ nav.navbar.navbar-default.mainNav
     .row
         .col-md-11.col-md-offset-1
             label#journalBox(ng-click="editing = true" ng-hide="editing"){{oneNote.noteInfo.data.entry}}
-            textarea#journalBox(ng-change="oneNote.edited = true ; saveTheEdit()" ng-blur="editing = false" ng-show="editing" ng-model="oneNote.noteInfo.data.entry")
+            textarea#journalBox(ng-change="oneNote.edited = true" ng-blur="editing = false ; saveTheEdit()" ng-show="editing" ng-model="oneNote.noteInfo.data.entry")
 
 
 

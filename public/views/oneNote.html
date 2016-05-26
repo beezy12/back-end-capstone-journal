@@ -15,7 +15,7 @@
   <div class="row">
     <div class="col-md-11 col-md-offset-1">
       <label id="journalBox" ng-click="editing = true" ng-hide="editing">{{oneNote.noteInfo.data.entry}}</label>
-      <textarea id="journalBox" ng-change="oneNote.edited = true" ng-blur="editing = false" ng-show="editing" ng-model="oneNote.noteInfo.data.entry"></textarea>
+      <textarea id="journalBox" ng-change="oneNote.edited = true ; saveTheEdit()" ng-blur="editing = false" ng-show="editing" ng-model="oneNote.noteInfo.data.entry"></textarea>
     </div>
   </div>
 </div>

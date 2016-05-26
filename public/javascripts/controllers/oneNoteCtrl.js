@@ -1,6 +1,6 @@
 'use strict'
 
-app.controller('oneNoteCtrl', ['$http', '$state', '$stateParams', function($http, $state, $stateParams) {
+app.controller('oneNoteCtrl', ['$http', '$state', '$stateParams', '$scope', function($http, $state, $stateParams, $scope) {
 
     const self = this
 
@@ -11,10 +11,12 @@ app.controller('oneNoteCtrl', ['$http', '$state', '$stateParams', function($http
     $http.get(`/api/userdata/getNote/${entry.id}`)
     .then((foundNote) => {
         self.noteInfo = foundNote
+        console.log('foundNote', foundNote)
     })
 
 
     self.deleteEntry = function(thisEntry) {
+        console.log('delete works')
         $http.delete(`/api/userdata/deleteEntry/${entry.id}`)
         .then(() => {
             $state.go('main')
@@ -23,6 +25,7 @@ app.controller('oneNoteCtrl', ['$http', '$state', '$stateParams', function($http
             console.log(res.status)
         })
     }
+
 
     let saved = false
     self.saveEntry = function() {
@@ -35,9 +38,20 @@ app.controller('oneNoteCtrl', ['$http', '$state', '$stateParams', function($http
                 self.status = data.data.status
                 saved = true
             })
-
         }
     }
 
 
+    self.saveTheEdit = function() {
+        console.log('ng-blur saving edit function fires after input loses focus')
+        let entryInfo = {title: self.title, entry: self.entry}
+    }
+
+    $scope.$watchGroup(['oneNote.noteInfo.data.entry', 'oneNote.noteInfo.data.title'], function(newvalue, oldvalue) {
+        console.log('something changed in the model')
+    });
+
+
+
 }])
+

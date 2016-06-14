@@ -48,7 +48,7 @@ app.controller('oneNoteCtrl', ['$http', '$state', '$stateParams', '$scope', func
     }
 
     $scope.$watchGroup(['oneNote.noteInfo.data.entry', 'oneNote.noteInfo.data.title'], function(newvalue, oldvalue) {
-        console.log('something changed in the model')
+        console.log('something changed in the ng-model')
     })
 
     // YOU DON'T NEED TO WATCH, JUST HAVE A DIFFERENT SAVE FUNCTION IN HERE THAT'S DIFFERENT FROM THE ONE IN THE WRITING CONTROLLER. HAVE THIS ONE RUN A MONGOOSE.UPDATE METHOD. DONE.

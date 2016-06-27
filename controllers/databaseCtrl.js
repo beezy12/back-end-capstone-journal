@@ -18,6 +18,7 @@ module.exports = {
     },
 
     saveJournalEntry (req, res) {
+            console.log('req user', req.session.passport.user)
         const newEntry = new entryModel({
             title: req.body.title,
             entry: req.body.entry,

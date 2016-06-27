@@ -11,6 +11,7 @@ app.controller('oneNoteCtrl', ['$http', '$state', '$stateParams', function($http
     $http.get(`/api/userdata/getNote/${entry.id}`)
     .then((foundNote) => {
         self.noteInfo = foundNote
+        console.log('foundnote', foundNote)
     })
 
 

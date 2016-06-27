@@ -23,7 +23,7 @@ app.controller('writeCtrl', ['$http', '$state', function($http, $state) {
                 saved = true
             })
         }
-
     }
-
 }])
+
+

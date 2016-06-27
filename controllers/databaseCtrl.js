@@ -18,7 +18,7 @@ module.exports = {
     },
 
     saveJournalEntry (req, res) {
-            console.log('req user', req.session.passport.user)
+        console.log('req user', req.session.passport.user)
         const newEntry = new entryModel({
             title: req.body.title,
             entry: req.body.entry,
@@ -47,6 +47,15 @@ module.exports = {
 
             res.send('successfully deleted the entry')
         })
+    },
+
+    updateEntry (req, res) {
+        console.log('updating here and these are the req.params', req.body)
+
+        entryModel.findByIdAndUpdate(() => {
+
+        })
+
     }
 
 }

@@ -4,11 +4,14 @@ app.controller('oneNoteCtrl', ['$http', '$state', '$stateParams', function($http
 
     const self = this
 
-    let entry = $stateParams;
-    console.log('this is the selected entry', entry)
+    let journal = $stateParams;
+    console.log('this is the selected journal', journal)
+
+    self.title = ''
+    self.entry = ''
 
 
-    $http.get(`/api/userdata/getNote/${entry.id}`)
+    $http.get(`/api/userdata/getNote/${journal.id}`)
     .then((foundNote) => {
         self.noteInfo = foundNote
         console.log('foundnote', foundNote)
@@ -16,7 +19,7 @@ app.controller('oneNoteCtrl', ['$http', '$state', '$stateParams', function($http
 
 
     self.deleteEntry = function(thisEntry) {
-        $http.delete(`/api/userdata/deleteEntry/${entry.id}`)
+        $http.delete(`/api/userdata/deleteEntry/${journal.id}`)
         .then(() => {
             $state.go('main')
         })
@@ -25,19 +28,17 @@ app.controller('oneNoteCtrl', ['$http', '$state', '$stateParams', function($http
         })
     }
 
-    let saved = false
-    self.saveEntry = function() {
+    // let saved = false
+    self.updateEntry = function() {
 
-        if(!saved) {
-            let entryInfo = {title: self.title, entry: self.entry}
+        let journalInfo = {title: self.noteInfo.data.title, entry: self.noteInfo.data.entry}
+        console.log('heres what youre trying to update', journalInfo)
 
-            $http.post('/api/userdata', entryInfo)
-            .then((data) => {
-                self.status = data.data.status
-                saved = true
-            })
-
-        }
+        $http.put('/api/userdata', journalInfo)
+        .then((data) => {
+            self.status = data.data.status
+            // saved = true
+        })
     }
 
 

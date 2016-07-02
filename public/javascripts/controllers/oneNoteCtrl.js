@@ -33,8 +33,9 @@ app.controller('oneNoteCtrl', ['$http', '$state', '$stateParams', function($http
 
         let journalInfo = {title: self.noteInfo.data.title, entry: self.noteInfo.data.entry}
         console.log('heres what youre trying to update', journalInfo)
+        console.log('journal id?', journal.id)
 
-        $http.put('/api/userdata', journalInfo)
+        $http.put(`/api/userdata/${journal.id}`, journalInfo)
         .then((data) => {
             self.status = data.data.status
             // saved = true

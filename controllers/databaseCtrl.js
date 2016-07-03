@@ -50,7 +50,6 @@ module.exports = {
     },
 
     updateEntry (req, res) {
-
          entryModel.findByIdAndUpdate(`${req.params.noteId}`, req.body, (err, foundNote) => {
             console.log('the junk is below');
             console.log(err);
@@ -61,3 +60,4 @@ module.exports = {
     }
 
 }
+

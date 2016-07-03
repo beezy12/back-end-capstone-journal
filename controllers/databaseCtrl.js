@@ -1,4 +1,3 @@
-// this ctrl connects from the routes, to the databaseEntry.js model, and back up
 'use strict'
 
 const userModel = require('../models/databaseUser')

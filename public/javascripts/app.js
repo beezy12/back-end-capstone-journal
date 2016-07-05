@@ -4,7 +4,7 @@
 const app = angular.module('scribe', ['ui.router'])
 
 app.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
-    // the state here matches the ui-sref on the a links in header.jade and elsewhere
+    // the state here matches the ui-sref on the a-links in header.jade and elsewhere
     $stateProvider
         .state('default', {
             url: '/',

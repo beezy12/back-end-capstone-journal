@@ -50,28 +50,54 @@ app.controller('oneNoteCtrl', ['$http', '$state', '$stateParams', function($http
 
 
 
-    document.getElementById('editor').addEventListener('click', bolden);
+    // document.getElementById('editor').addEventListener('click', bolden);
 
-    function bolden() {
-        var field = document.getElementById('journalBox').toString()
-        var whatIsIt = typeof(field)
-        console.log(whatIsIt)
+    // function bolden() {
+    //     var field = document.getElementById('journalBox').toString()
+    //     var whatIsIt = typeof(field)
+    //     console.log(whatIsIt)
 
-        var startPos = field.selectionStart
-        var andThis = typeof(startPos)
-        console.log('andThis', andThis)
+    //     var startPos = field.selectionStart
+    //     var andThis = typeof(startPos)
+    //     console.log('andThis', andThis)
 
-        var endPos = field.selectionEnd
-        var fieldValue = field.value
-        console.log(startPos)
-        var selectedText = fieldValue.substring(startPos, endPos)
-        console.log('selectedText heeeere', selectedText)
+    //     var endPos = field.selectionEnd
+    //     var fieldValue = field.value
+    //     console.log(startPos)
+    //     var selectedText = fieldValue.substring(startPos, endPos)
+    //     console.log('selectedText heeeere', selectedText)
 
-        var words = document.getElementById('journalBox')
-        // var range = words.
+    //     var words = document.getElementById('journalBox')
+    //     // var range = words.
+    // }
 
 
-    }
+
+    // document.getElementById('editor').addEventListener('click', ShowSelectionInsideTextarea);
+
+    //         function ShowSelectionInsideTextarea() {
+    //              var textComponent = document.getElementById('journalBox');
+
+    //               var selectedText;
+    //               // IE version
+    //               if (document.selection != undefined)
+    //               {
+    //                 textComponent.focus();
+    //                 var sel = document.selection.createRange();
+    //                 selectedText = sel.text;
+    //               }
+    //               // Mozilla version
+    //               else if (textComponent.selectionStart != undefined)
+    //               {
+    //                 var startPos = textComponent.selectionStart;
+    //                 var endPos = textComponent.selectionEnd;
+    //                 selectedText = textComponent.value.substring(startPos, endPos)
+    //               }
+    //                 alert("You selected: " + selectedText);
+
+    //         }
+
+
 
 
      // Select some text below and then click the button:<br/>

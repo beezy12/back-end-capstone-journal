@@ -1,33 +1,33 @@
 doctype html
 html(lang="en")
-head
-    title scribe
-    link(href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet")
-    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
-    link(type="text/css" rel="stylesheet" href="stylesheets/materialize.min.css"  media="screen,projection")
-    link(href='https://fonts.googleapis.com/css?family=Poiret+One|Quicksand|Cinzel' rel='stylesheet' type='text/css')
-    link(href='stylesheets/styles.css' rel='stylesheet')
+    head
+        title scribe
+        link(href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+        link(type="text/css" rel="stylesheet" href="stylesheets/materialize.min.css"  media="screen,projection")
+        link(href='https://fonts.googleapis.com/css?family=Poiret+One|Quicksand|Cinzel' rel='stylesheet' type='text/css')
+        link(href='stylesheets/styles.css' rel='stylesheet')
 
 
-body(ng-app="scribe")
+    body(ng-app="scribe")
 
 
 
-    //- where all angular html-partials will be loaded
-    div(ui-view)
+        //- where all angular html-partials will be loaded
+        div(ui-view)
 
 
-//-Bootstrap js and required jquery
-script(src="/lib/jquery/dist/jquery.min.js")
-script(type="text/javascript" src="javascripts/materialize.min.js")
-script(src="/lib/bootstrap/dist/js/bootstrap.min.js")
-//- angular links
-script(src="/lib/angular/angular.min.js")
-script(src="/lib/angular-ui-router/release/angular-ui-router.min.js")
-script(src="/javascripts/app.js")
-//- controllers
-//- script(src="/javascripts/controllers/welcomeCtrl.js")
-script(src="/javascripts/controllers/authCtrl.js")
-script(src="/javascripts/controllers/writeCtrl.js")
-script(src="/javascripts/controllers/noteListCtrl.js")
-script(src="/javascripts/controllers/oneNoteCtrl.js")
+        //-Bootstrap js and required jquery
+        script(src="/lib/jquery/dist/jquery.min.js")
+        script(type="text/javascript" src="javascripts/materialize.min.js")
+        script(src="/lib/bootstrap/dist/js/bootstrap.min.js")
+        //- angular links
+        script(src="/lib/angular/angular.min.js")
+        script(src="/lib/angular-ui-router/release/angular-ui-router.min.js")
+        script(src="/javascripts/app.js")
+        //- controllers
+        //- script(src="/javascripts/controllers/welcomeCtrl.js")
+        script(src="/javascripts/controllers/authCtrl.js")
+        script(src="/javascripts/controllers/writeCtrl.js")
+        script(src="/javascripts/controllers/noteListCtrl.js")
+        script(src="/javascripts/controllers/oneNoteCtrl.js")

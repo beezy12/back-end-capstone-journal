@@ -43,4 +43,65 @@ app.controller('oneNoteCtrl', ['$http', '$state', '$stateParams', function($http
     }
 
 
+
+    // get ids for buttons
+    // onclick have a function run that gets the selected text
+    // attach the proper modification
+
+
+
+    document.getElementById('editor').addEventListener('click', bolden);
+
+    function bolden() {
+        var field = document.getElementById('journalBox').toString()
+        var whatIsIt = typeof(field)
+        console.log(whatIsIt)
+
+        var startPos = field.selectionStart
+        var andThis = typeof(startPos)
+        console.log('andThis', andThis)
+
+        var endPos = field.selectionEnd
+        var fieldValue = field.value
+        console.log(startPos)
+        var selectedText = fieldValue.substring(startPos, endPos)
+        console.log('selectedText heeeere', selectedText)
+
+        var words = document.getElementById('journalBox')
+        // var range = words.
+
+
+    }
+
+
+     // Select some text below and then click the button:<br/>
+    // <textarea id="myTextarea" rows="5" cols="30">
+    //     Lorem ipsum dolor sit amet,
+    //     consectetur adipiscing elit.
+    //     </textarea>
+    //     <button onclick="alert(getTextSelection())">alert text selection</button>
+
+    //     <script type="text/javascript">
+    //         function getTextSelection(){
+    //             var field = document.getElementById("myTextarea");
+    //             var startPos = field.selectionStart;
+    //             var endPos = field.selectionEnd;
+    //             var field_value = field.value;
+    //             var selectedText = field_value.substring(startPos,endPos);
+    //             return selectedText;
+    //         }
+    //     </script>
+
+
+
+
+            // function myFunction(obj) {
+            //     var selectedText = obj.value.slice(obj.selectionStart, obj.selectionEnd);
+            //     alert(selectedText);
+        //}
+
+
+
+
+
 }])

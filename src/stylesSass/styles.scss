@@ -100,12 +100,16 @@ input[type="text"], input[type="email"], input[type="submit"], input[type='texta
 
 // Journaling area ***************************************************
 
+.editor {
+    color: white;
+}
+
 .viewList {
     font-size: 1em;
 }
 
 .moveDown {
-    margin-top: 29px;h
+    margin-top: 29px;
 }
 
 #journalTitle {
@@ -132,6 +136,10 @@ input[type="text"], input[type="email"], input[type="submit"], input[type='texta
     margin-top: 20px;
     padding: 15px;
     background-color: rgba(0,0,0,0);
+}
+
+.boldenText {
+    font-weight: 800;
 }
 
 

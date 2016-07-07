@@ -1,6 +1,6 @@
 'use strict'
 
-app.controller('noteListCtrl', ['$http', '$state', function($http, $state) {
+app.controller('noteListCtrl', ['$http', '$state', '$angularMoment', function($http, $state, $angularMoment) {
 
     const self = this
 
@@ -11,6 +11,30 @@ app.controller('noteListCtrl', ['$http', '$state', function($http, $state) {
         console.log('userData from the database ===>', userData)
         self.data = userData.data
     })
+
+
+    // let today = new Date()
+    // console.log('daaaaate', today)
+
+    // let day = today.getFullDay()
+    // let month = today.getFullMonth()
+    // let date = today.getDate()
+    // let year = today.getFullYear()
+
+    // let wholeDate = day + " " + month + " " + date + ", " + year
+
+    // document.getElementById('dateStuff').innerHTML = wholeDate
+
+
+    let now = moment().day()
+    console.log(moment.weekdays[now])
+    // console.log(today)
+
+
+
+
+
+
 }])
 
 

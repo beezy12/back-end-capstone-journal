@@ -44,13 +44,19 @@ app.controller('oneNoteCtrl', ['$http', '$state', '$stateParams', function($http
 
 
 
+
+
+
+
+
+
     // get ids for buttons
     // onclick have a function run that gets the selected text
     // attach the proper modification
 
 
 
-    // document.getElementById('editor').addEventListener('click', bolden);
+
 
     // function bolden() {
     //     var field = document.getElementById('journalBox').toString()

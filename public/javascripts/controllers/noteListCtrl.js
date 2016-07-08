@@ -1,6 +1,6 @@
 'use strict'
 
-app.controller('noteListCtrl', ['$http', '$state', '$angularMoment', function($http, $state, $angularMoment) {
+app.controller('noteListCtrl', ['$http', '$state', function($http, $state) {
 
     const self = this
 

@@ -19,13 +19,13 @@ nav.navbar.navbar-default.mainNav
 .container-fluid
     .row
         .col-md-11.col-md-offset-1
-            label#journalTitle.moveDown(ng-click="editingTitle = true" ng-hide="editingTitle"){{oneNote.noteInfo.data.title}}
+            div#journalTitle.moveDown(ng-click="editingTitle = true" ng-hide="editingTitle"){{oneNote.noteInfo.data.title}}
             input#journalTitle(ng-change="oneNote.edited = true ; saveTheEdit()" ng-blur="editingTitle = false" ng-show="editingTitle" ng-model="oneNote.noteInfo.data.title")
 
 
     .row
         .col-md-11.col-md-offset-1
-            label#journalBox(ng-click="editing = true" ng-hide="editing"){{oneNote.noteInfo.data.entry}}
+            div#journalBox(ng-click="editing = true" ng-hide="editing"){{oneNote.noteInfo.data.entry}}
             textarea#journalBox(ng-change="oneNote.edited = true" ng-blur="editing = false" ng-show="editing" ng-model="oneNote.noteInfo.data.entry")
 
 
